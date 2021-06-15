@@ -3,227 +3,132 @@
 
 
         <!-- Hero Start -->
-        <div class="hero">
+        <div class="hero" style="height: 300px;">
             <div class="container-fluid">
                 <div class="row align-items-center">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="hero-text">
-                            <h1>Birthday cake design contest</h1>
+                    <div class="col-sm-12 col-md-12">
+                        <div class="text-center mt-4">
+                            <h1 style="text-align: center;">Participant Registration</h1>
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
                             </p>
-                            <div class="hero-btn">
-                                <a class="btn" href="">Join Now</a>
-                                <a class="btn" href="">Vote Cake</a>
-                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 d-none d-md-block">
-                        <div class="hero-image">
-                            <img src="<?= base_url('assets/')?>img/cake1.png" alt="cake">
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
         <!-- Hero End -->
 
 
-        <!-- About Start -->
-        <!-- <div class="about wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="about-img">
-                            <img src="<?= base_url('assets/') ?>img/about.png" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-6">
-                        <div class="section-header text-left">
-                            <p>Learn About Us</p>
-                            <h2>Welcome to Yooga</h2>
-                        </div>
-                        <div class="about-text">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
-                            </p>
-                            <a class="btn" href="">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- About End -->
-
-
-        <!-- Service Start -->
-        <!-- <div class="service">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>What we do</p>
-                    <h2>Yoga For Health</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-workout"></i>
-                            </div>
-                            <h3>Heal emotions</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item active">
-                            <div class="service-icon">
-                                <i class="flaticon-workout-1"></i>
-                            </div>
-                            <h3>Body Refreshes</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-workout-2"></i>
-                            </div>
-                            <h3>Mind & Serenity</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-workout-3"></i>
-                            </div>
-                            <h3>Enjoy Your life</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-workout-4"></i>
-                            </div>
-                            <h3>Body & Spirituality</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-yoga-pose"></i>
-                            </div>
-                            <h3>Body & Mind</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Service End -->
-
+   
 
         <!-- Class Start -->
-        <div class="class">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                 <!--    <p>Our Classes</p> -->
-                    <h2>Competition Product</h2>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                       <!--  <ul id="class-filter">
-                            <li data-filter="*" class="filter-active">All Classes</li>
-                            <li data-filter=".filter-1">Pilates Yoga</li>
-                            <li data-filter=".filter-2">Hatha Yoga</li>
-                            <li data-filter=".filter-3">Vinyasa yoga</li>
-                        </ul> -->
-                    </div>
-                </div>
+       
 
+                
              
                 <div class="row class-container">
-                       <?php foreach ($produk as $data) { ?>
-                    <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                       
+                    <div class="col-lg-3 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
 
-                        <div class="card" style="width: 20rem;border-radius:20px; border-width: 6px; border-color: pink; ">
-                          <img class="zoom card-img-top" src="<?= base_url("assets/gambar_produk/") ?><?= $data['gambar_produk'] ?>" alt="Card image cap">
+                       <!--  cart 1 -->
+
+                    </div>
+
+
+
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                          <h3 class="text-center"> <i class="fas fa-user"></i> Register Account </h3>
+                        <div class="card" style="border-width: 5px; border-color: pink; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                           <div class="card-body">
-                            <h5 class="card-title text-center"><?= $data['judul_produk'] ?></h5>
-                            <p class="card-text text-center"><?= $data['keterangan'] ?>.</p>
-                             <center>
-                                <p><i class="fas fa-heart"> 234 Vote</i></p>
-                               
-                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter<?= $data['id']  ?>"><i class="fas fa-heart"></i></button>
-                                 <a class="btn btn-primary" href="<?= base_url("produk/detail/") ?><?= $data['kode_produk'] ?>"><i class="fas fa-eye"></i></a>
-                                
-
-                            </center>
-
-                            <div class="modal fade" id="exampleModalCenter<?= $data['id']  ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                              <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">Form Vote</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div> 
-                                  <div class="modal-body">
-                                    <form method="post" action="<?= base_url("ebunga/vote") ?>">
-
-                                        <input type="hidden" name="kode_produk" value="<?= $data['kode_produk'] ?>">
-                                         <input type="hidden" name="kode_peserta" value="<?= $data['kode_peserta'] ?>">
-
-
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter Name" name="name" required="">
-                                      </div>
-
-                                      <div class="form-group">
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" required="">
-                                      </div>
-
-                                      <div class="form-group">
-                                        <input type="number" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter No telp" name="notlp" required=""> 
-                                      </div>
+                                <form>
+                                  <div class="form-group">
+                                    <label for="exampleInputEmail1">Name</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required="">
                                     
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1">Email</label>
+                                    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter Email" required="">
+                                  </div>
                                     
-                                  
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">No.Telp</label>
+                                    <input type="nu" class="form-control" id="exampleInputPassword1" placeholder="Enter No.telp" required="">
                                   </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-danger">Vote</button>
+
+                                  <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <label for="provinsi">Provinsi</label>
+                                        <select class="form-control" id="prov">
+                                            <option>-- Pilih Provinsi --</option>
+                                            <?php foreach ($prov as $data) {?>
+                                            <option value="<?= $data['id'] ?>"><?= $data['name'] ?></option>
+                                        <?php } ?>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label for="kabupaten">Kabupaten</label>
+                                      <select class="form-control" id="kabupaten">
+                                           
+                                        </select>
+                                    </div>
                                   </div>
-                                 </form>
-                                </div>
-                              </div>
-                            </div>
 
+                                  <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <label for="kecamatan">Kecamatan</label>
+                                     <select class="form-control" id="kecamatan">
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label for="kelurahan">Kelurahan</label>
+                                        <select class="form-control" id="kelurahan">
+                                            
+                                        </select>
+                                    </div>
+                                  </div>
 
+                                  <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <label for="kecamatan">Password</label>
+                                        <input type="password" name="pass1" class="form-control" placeholder="Enter password">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label for="kelurahan">Confirm password</label>
+                                        <input type="password" name="pass2" class="form-control" placeholder="Enter confirm password">
+                                    </div>
+                                  </div>
 
+                                  <button type="submit" class="btn btn-primary btn-lg btn-block">Registrasi</button>
+                                </form>
+                            
                           </div>
                         </div>
-                        
+
+
+
                     </div>
+
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+
+                        <!-- cart 3 -->
+
+
+                    </div>
+
+
+                        
+
+
                     
-                <?php } ?>
+                    
+               
 
 
 
@@ -540,4 +445,35 @@
 
 
         <!-- Footer Start -->
-        
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+        <script>
+            $(document).ready(function(){
+
+                $("#prov").change(function(){
+                    var id_prov = $(this).val();
+                    var url = "<?= base_url('ebunga/kab') ?>/"+id_prov;
+                    $("#kabupaten").load(url);
+                })
+            })
+
+
+            $(document).ready(function(){
+
+                $("#kabupaten").change(function(){
+                    var id_kab = $(this).val();
+                    var url = "<?= base_url('ebunga/kec') ?>/"+id_kab;
+                    $("#kecamatan").load(url);
+                })
+            })
+
+
+            $(document).ready(function(){
+
+                $("#kecamatan").change(function(){
+                    var id_kec = $(this).val();
+                    var url = "<?= base_url('ebunga/kel') ?>/"+id_kec;
+                    $("#kelurahan").load(url);
+                })
+            })
+        </script>
