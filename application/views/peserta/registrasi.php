@@ -44,7 +44,7 @@
                           <h3 class="text-center"> <i class="fas fa-user"></i> Register Account </h3>
                         <div class="card" style="border-width: 5px; border-color: pink; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                           <div class="card-body">
-                                <form>
+                                <form method="post" action="<?= base_url("ebunga/register_create") ?>">
                                   <div class="form-group">
                                     <label for="exampleInputEmail1">Name</label>
                                     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required="" name="name">

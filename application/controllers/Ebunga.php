@@ -72,6 +72,26 @@
 		}
 
 
+		function register_create(){
+			$data = array(
+
+				'kode_peserta' => '343434',
+				'name' => $this->input->post('name'),
+				'email' => $this->input->post('email'),
+				'no_telp' => $this->input->post('notlp'),
+				'prov' => $this->input->post('prov'),
+				'kab' => $this->input->post('kab'),
+				'kec' => $this->input->post('kec'),
+				'kel' => $this->input->post('kel'),
+				'pass' => $this->input->post('pass2'),
+				'date_registrasi' => ''
+			 );
+
+
+			$input = $this->input
+		}
+
+
 		function kab($id){
 			
 			$data['kab'] = $this->db->get_where('tbl_kabupaten', array('province_id' => $id))->result_array();
