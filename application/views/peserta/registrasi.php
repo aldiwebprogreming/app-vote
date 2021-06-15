@@ -47,23 +47,23 @@
                                 <form>
                                   <div class="form-group">
                                     <label for="exampleInputEmail1">Name</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required="">
+                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required="" name="name">
                                     
                                   </div>
                                   <div class="form-group">
                                     <label for="exampleInputPassword1">Email</label>
-                                    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter Email" required="">
+                                    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter Email" required="" name="email">
                                   </div>
                                     
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">No.Telp</label>
-                                    <input type="nu" class="form-control" id="exampleInputPassword1" placeholder="Enter No.telp" required="">
+                                    <input type="nu" class="form-control" id="exampleInputPassword1" placeholder="Enter No.telp" required="" name="notlp">
                                   </div>
 
                                   <div class="form-row">
                                     <div class="form-group col-md-6">
                                       <label for="provinsi">Provinsi</label>
-                                        <select class="form-control" id="prov">
+                                        <select class="form-control" id="prov" name="prov">
                                             <option>-- Pilih Provinsi --</option>
                                             <?php foreach ($prov as $data) {?>
                                             <option value="<?= $data['id'] ?>"><?= $data['name'] ?></option>
@@ -72,7 +72,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                       <label for="kabupaten">Kabupaten</label>
-                                      <select class="form-control" id="kabupaten">
+                                      <select class="form-control" id="kabupaten" name="kab">
                                            
                                         </select>
                                     </div>
@@ -81,13 +81,13 @@
                                   <div class="form-row">
                                     <div class="form-group col-md-6">
                                       <label for="kecamatan">Kecamatan</label>
-                                     <select class="form-control" id="kecamatan">
+                                     <select class="form-control" id="kecamatan" name="kec">
                                             
                                         </select>
                                     </div>
                                     <div class="form-group col-md-6">
                                       <label for="kelurahan">Kelurahan</label>
-                                        <select class="form-control" id="kelurahan">
+                                        <select class="form-control" id="kelurahan" name="kel">
                                             
                                         </select>
                                     </div>
