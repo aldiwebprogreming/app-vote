@@ -57,3 +57,7 @@ $route['ebunga/kab/(:any)'] ='ebunga/kab/$1';
 $route['ebunga/kec/(:any)'] ='ebunga/kec/$1';
 $route['ebunga/kel/(:any)'] ='ebunga/kel/$1';
 $route['registrasi'] ='ebunga/registrasi';
+$route['login'] ='ebunga/login';
+$route['dashboard'] ='peserta/index';
+$route['upload'] ='peserta/upload';
+

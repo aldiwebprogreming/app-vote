@@ -1,24 +1,59 @@
 
+
         <!-- Nav Bar End -->
 
-
-        <!-- Hero Start -->
-        <div class="hero" style="height: 300px;">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-sm-12 col-md-12">
-                        <div class="text-center mt-4">
-                            <h1 style="text-align: center;">Participant Registration</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
-                            </p>
-                            
-                        </div>
+<div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Dashboard participant</h2>
                     </div>
-                    
+                    <div class="col-12 mt-3">
+                        <a href="<?= base_url('dashboard/') ?>">Home</a>
+                        <a href="<?= base_url('upload/') ?>">upload</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- Page Header End -->
+
+
+        <!-- About Start -->
+        <div class="about wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm-4 mt-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5>VOTE</h5>
+                        <p class="card-text" style="font-size: 50px; color: red;"><i class="fas fa-heart"></i> 210</p><p>
+                        <a href="#" class="btn btn-dark">List Vote</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 mt-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">CAKE UPLOAD </h5>
+                        <p class="card-text" style="font-size: 50px; color: red;"><i class="fas fa-birthday-cake"></i> Available</p>
+                        <a href="#" class="btn btn-dark">Upload Ceke</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 mt-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title" >CAKE PROFILE</h5>
+                        <p class="card-text" style="font-size: 50px; color: red;"><i class="fas fa-user-tag"></i> </p>
+                        <a href="#" class="btn btn-dark">Profile</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Start -->
+       
         <!-- Hero End -->
 
 
@@ -40,111 +75,7 @@
 
 
 
-                    <div class="col-lg-6 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-                          <h3 class="text-center"> <i class="fas fa-user"></i> Register Account </h3>
-                        <div class="card" style="border-width: 5px; border-color: pink; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                          <div class="card-body">
-                                <form method="post" action="<?= base_url("ebunga/registrasi") ?>">
-                                  <div class="form-group">
-                                    <label for="exampleInputEmail1">Name</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"   name="name" value="<?= set_value('name'); ?>">
-                                     <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
-                                    
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="exampleInputPassword1">Email</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1"name="email" value="<?= set_value('email'); ?>">
-                                     <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
-                                  </div>
-                                  
-                                    
-                                <div class="">
-                                      <label>No.telp</label>
-                                  <div class="input-group">
-
-                                    <div class="input-group-prepend">
-                                      <div class="input-group-text">+62</div>
-                                    </div>
-                                    <input type="number" class="form-control" id="inlineFormInputGroupUsername"  name="notelp" value="<?= set_value('notelp'); ?>">
-                                  </div>
-                                   <?= form_error('notelp', '<small class="text-danger pl-3">', '</small>'); ?>
-                                </div>
-                                
-                                <br>
-                                  <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                      <label for="provinsi">Provinsi</label>
-                                        <select class="form-control" id="prov" name="prov">
-                                            <option>-- Pilih Provinsi --</option>
-                                            <?php foreach ($prov as $data) {?>
-                                            <option value="<?= $data['id'] ?>"><?= $data['name'] ?></option>
-                                        <?php } ?>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                      <label for="kabupaten">Kabupaten</label>
-                                      <select class="form-control" id="kabupaten" name="kab">
-                                           
-                                        </select>
-                                        <?= form_error('kab', '<small class="text-danger pl-3">', '</small>'); ?>
-                                    </div>
-                                     
-                                  </div>
-                                  
-
-                                  <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                      <label for="kecamatan">Kecamatan</label>
-                                     <select class="form-control" id="kecamatan" name="kec">
-                                            
-                                        </select>
-                                        <?= form_error('kec', '<small class="text-danger pl-3">', '</small>'); ?>
-                                    </div>
-                                     
-                                    <div class="form-group col-md-6">
-                                      <label for="kelurahan">Kelurahan</label>
-                                        <select class="form-control" id="kelurahan" name="kel">
-                                            
-                                        </select>
-                                        <?= form_error('kel', '<small class="text-danger pl-3">', '</small>'); ?>
-                                    </div>
-                                    
-                                  </div>
-                                   
-
-                                  <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                      <label for="kecamatan">Password</label>
-                                        <input type="password" name="pass1" class="form-control" value="<?= set_value('pass1'); ?>">
-                                         <?= form_error('pass1', '<small class="text-danger pl-3">', '</small>'); ?>
-                                    </div>
-                                    
-                                    <div class="form-group col-md-6">
-                                      <label for="kelurahan">Confirm password</label>
-                                        <input type="password" name="pass2" class="form-control" >
-                                    </div>
-                                  </div>
-
-                                  <button type="submit" class="btn btn-dark btn-lg btn-block">Register</button>
-                                </form>
-                            
-                          </div>
-                        </div>
-
-
-
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-
-                        <!-- cart 3 -->
-
-
-                    </div>
-
-
-                        
+                              
 
 
                     
@@ -466,35 +397,5 @@
 
 
         <!-- Footer Start -->
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
-        <script>
-            $(document).ready(function(){
-
-                $("#prov").change(function(){
-                    var id_prov = $(this).val();
-                    var url = "<?= base_url('ebunga/kab') ?>/"+id_prov;
-                    $("#kabupaten").load(url);
-                })
-            })
-
-
-            $(document).ready(function(){
-
-                $("#kabupaten").change(function(){
-                    var id_kab = $(this).val();
-                    var url = "<?= base_url('ebunga/kec') ?>/"+id_kab;
-                    $("#kecamatan").load(url);
-                })
-            })
-
-
-            $(document).ready(function(){
-
-                $("#kecamatan").change(function(){
-                    var id_kec = $(this).val();
-                    var url = "<?= base_url('ebunga/kel') ?>/"+id_kec;
-                    $("#kelurahan").load(url);
-                })
-            })
-        </script>
+         <script src="<?= base_url('assets/') ?>alert.js"></script>
+        <?php echo "<script>".$this->session->flashdata('message')."</script>"?>

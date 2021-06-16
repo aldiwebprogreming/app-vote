@@ -95,8 +95,14 @@
                                 <a href="single.html" class="dropdown-item">Blog Detail</a>
                             </div>
                         </div> -->
-                        <a href="<?= base_url('registrasi/') ?>" class="nav-item nav-link">Register</a>
-                        <a href="<?= base_url('login/') ?>" class="nav-item nav-link">Login</a>
+
+                        <a href="<?= base_url('registrasi/') ?>" class="nav-item nav-link">Dashboard</a>
+
+                         <a href="<?= base_url('registrasi/') ?>" class="nav-item nav-link">Profil</a>
+
+                         <a href="<?= base_url('upload/') ?>" class="nav-item nav-link">Upload</a>
+                     
+                        <a href="<?= base_url('login/') ?>" class="nav-item nav-link">Logout</a>
 
                     </div>
                 </div>
