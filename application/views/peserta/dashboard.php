@@ -27,7 +27,7 @@
                       <div class="card-body">
                         <h5>VOTE</h5>
                         <p class="card-text" style="font-size: 50px; color: red;"><i class="fas fa-heart"></i> 210</p><p>
-                        <a href="#" class="btn btn-dark">List Vote</a>
+                        <a href="<?= base_url('listvote/') ?>" class="btn btn-dark">List Vote</a>
                       </div>
                     </div>
                   </div>

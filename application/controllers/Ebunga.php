@@ -25,11 +25,23 @@
 
 		function vote(){
 
+
+
+
 			$kode_produk = $this->input->post('kode_produk');
 			$kode_peserta = $this->input->post('kode_peserta');
 			$name = $this->input->post('name');
 			$email = $this->input->post('email');
 			$notlp = $this->input->post('notlp');
+
+			$cek = $this->db->get_where('tbl_vote',   array('email_vote' => $email))->num_rows();
+
+			if ($cek >= 1) {
+				$this->session->set_flashdata('message', 'swal("Maaf!", "Anda sudah vote", "warning");');
+
+			redirect('/');
+				
+			} else {
 
 			$data = array(
 			'kode_peserta' => $kode_peserta ,
@@ -45,7 +57,9 @@
 
 			$input = $this->db->insert('tbl_vote', $data);
 			$this->session->set_flashdata('message', 'swal("Sukses!", "Vote success", "success");');
-		redirect('/');
+			redirect('/');
+
+		}
 
 
 		}
@@ -195,7 +209,7 @@
         $this->session->unset_userdata('email');
          $this->session->unset_userdata('name');
 
-        redirect('login');
+        redirect('login ');
     }
 
 

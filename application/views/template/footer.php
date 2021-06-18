@@ -50,5 +50,10 @@
         <script src="<?= base_url('assets/') ?>js/main.js"></script>
         <script src="<?= base_url('assets/') ?>alert.js"></script>
         <?php echo "<script>".$this->session->flashdata('message')."</script>"?>
+         <script>
+          $(document).ready(function() {
+              $('#example').DataTable();
+              } );
+        </script>
     </body>
 </html>

@@ -58,6 +58,10 @@ $route['ebunga/kec/(:any)'] ='ebunga/kec/$1';
 $route['ebunga/kel/(:any)'] ='ebunga/kel/$1';
 $route['registrasi'] ='ebunga/registrasi';
 $route['login'] ='ebunga/login';
+$route['logout'] ='ebunga/logout';
 $route['dashboard'] ='peserta/index';
 $route['upload'] ='peserta/upload';
+$route['profil'] = 'peserta/profil';
+$route['listvote'] = 'peserta/listVote';
+
 

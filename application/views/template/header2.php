@@ -10,6 +10,13 @@
         <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
 
+
+          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
+ 
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
+
+
+
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -96,13 +103,13 @@
                             </div>
                         </div> -->
 
-                        <a href="<?= base_url('registrasi/') ?>" class="nav-item nav-link">Dashboard</a>
+                        <a href="<?= base_url('dashboard/') ?>" class="nav-item nav-link">Dashboard</a>
 
-                         <a href="<?= base_url('registrasi/') ?>" class="nav-item nav-link">Profil</a>
+                         <a href="<?= base_url('profil/') ?>" class="nav-item nav-link">Profil</a>
 
                          <a href="<?= base_url('upload/') ?>" class="nav-item nav-link">Upload</a>
                      
-                        <a href="<?= base_url('login/') ?>" class="nav-item nav-link">Logout</a>
+                        <a href="<?= base_url('logout/') ?>" class="nav-item nav-link">Logout</a>
 
                     </div>
                 </div>

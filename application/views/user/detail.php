@@ -53,7 +53,7 @@
                         <div class="card" style="border-width: 5px; border-color: pink;">
                           <div class="card-body">
                             <center>
-                            <img style="height: 200px; margin-bottom: 30px;" src="<?= base_url("assets/gambar_produk/") ?><?= $data['gambar_produk'] ?>" class="rounded float-left" alt="product">
+                            <img style="height: 200px; margin-bottom: 30px;" src="<?= base_url("produk/") ?><?= $data['gambar_produk'] ?>" class="rounded float-left" alt="product">
                             </center>
                             <div class="mt-4">
                                 <button type="button" class="btn btn-outline-danger btn-sm btn-lg btn-block" data-toggle="modal" data-target="#exampleModalCenter<?= $data['id']  ?>">Vote</button>
@@ -115,11 +115,7 @@
                           <div class="card-body">
                           <table class="table table-striped">
                               <thead>
-                                <tr>
-                                  <th scope="row">Nama peserta</th>
-                                  <td>Ebunga</td>
                                 
-                                </tr>
                                 <tr>
                                   <th scope="row">Kode Peserta</th>
                                   <td><?= $data['kode_peserta'] ?></td>
