@@ -69,6 +69,13 @@
                                   </div>
                                    <?= form_error('notelp', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
+                                <br>
+
+                                 <div class="form-group">
+                                    <label for="">Name Store</label>
+                                    <input type="text" class="form-control" name="name_store" value="<?= set_value('name_store'); ?>">
+                                     <?= form_error('name_store', '<small class="text-danger pl-3">', '</small>'); ?>
+                                  </div>
                                 
                                 <br>
                                   <div class="form-row">

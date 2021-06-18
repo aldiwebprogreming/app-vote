@@ -40,10 +40,53 @@
                   <div class="col-sm-8 mt-3">
                     <div class="card">
                       <div class="card-body">
+                          <div id="share-sossial-buttons">
+    
+   Share to :<br>
+
+   <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60cc55383e9275e2"></script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox_bbi3"></div>
+ 
+    <!-- Untuk Facebook -->
+   <!--  <a href="http://www.facebook.com/sharer.php?u=https://www.kerincicreative.com/shop-single.php?id=13" target="_blank">
+        <img src="<?= base_url("assets/img/fb.png") ?>" alt="Facebook" style="height: 40px;">
+    </a> -->
+
+   
+    
+    <!-- Untuk Google+ -->
+   <!--  <a href="whatsapp://send?text=https://masrud.com/post/membuat-tombol-share-dan-chat-whatsapp" target="_blank">
+        <img src="<?= base_url("assets/img/ig.png") ?>" alt="Google" style="height: 60px;" />
+    </a>
+     -->
+    <!-- Untuk Twitter -->
+    <!-- <a href="https://twitter.com/share?url=https://dumetschool.com&text=Simple%20Share%20Buttons&hashtags=simplesharebuttons" target="_blank">
+        <img src="<?= base_url("assets/img/twiter1.png") ?>" alt="Twitter" style="height: 60px;" />
+    </a> -->
+
+
+    
+
+</div>
+                        
+                       
+
+                         <div class="input-group mb-3">
+                           <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" value="http://localhost/app-vote/produk/detail/PR002" id="myInput">
+                               <div class="input-group-append">
+                                <button class="btn btn-primary" onclick="myFunction()"><i class="fas fa-copy"></i></button>
+                            </div>
+                          </div>
+
                         <h5 class="card-title">PROFILE </h5>
                         
                               <table class="table table-striped">
+
+
                                 <thead>
+
                                   
                                 </thead>
                                 <tbody>
@@ -207,5 +250,23 @@
 
     }
   })
+         </script>
+
+
+         <script>
+           function myFunction() {
+  /* Get the text field */
+      var copyText = document.getElementById("myInput");
+
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+      /* Copy the text inside the text field */
+      document.execCommand("copy");
+
+      /* Alert the copied text */
+      
+    }
          </script>
 

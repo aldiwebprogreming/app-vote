@@ -165,8 +165,26 @@
                         <div class="card" style="width: 20rem;border-radius:20px; border-width: 6px; border-color: pink; ">
                           <img class="zoom card-img-top" src="<?= base_url("produk/") ?><?= $data['gambar_produk'] ?>" alt="Card image cap">
                           <div class="card-body">
+
                             <h5 class="card-title text-center"><?= $data['judul_produk'] ?></h5>
                             <p class="card-text text-center"><?= $data['keterangan'] ?>.</p>
+                             <p class="card-text text-center" style="font-weight: bold;"><i class="fas fa-store" style="color: #6495ED"></i> <?= $data['nama_toko'] ?></p>
+
+                            <?php  
+
+                                $kodeP = $data['kode_peserta'];
+                               
+                                
+                                $regis = $this->db->query("SELECT * FROM tbl_registrasi_peserta WHERE kode_peserta='$kodeP'")->row_array();
+                                $kab = $regis['kab'];
+
+                                $kabupaten = $this->db->get_where('tbl_kabupaten',array('id' => $kab))->row_array();
+
+                              
+
+                              ?>
+
+                             <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> <?php   echo $kabupaten['name']; ?></p>
                              <center>
                                 <p><i class="fas fa-heart"> 234 Vote</i></p>
                                

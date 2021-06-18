@@ -80,7 +80,7 @@
         	$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[tbl_registrasi_peserta.email]', [
             'is_unique' => 'This email has already registered!']);
         	$this->form_validation->set_rules('notelp', 'No.telp', 'required|trim|min_length[11]|max_length[13]');
-
+        	$this->form_validation->set_rules('name_store', 'Store', 'required|trim');
         	$this->form_validation->set_rules('kab', 'Kabupaten', 'required|trim');
         	$this->form_validation->set_rules('kec', 'Kecamatan', 'required|trim');
         	$this->form_validation->set_rules('kel', 'Kelurahan', 'required|trim');
@@ -106,6 +106,7 @@
 				'name' => $this->input->post('name'),
 				'email' => $this->input->post('email'),
 				'no_telp' => $this->input->post('notelp'),
+				'name_store' => $this->input->post('name_store'),
 				'prov' => $this->input->post('prov'),
 				'kab' => $this->input->post('kab'),
 				'kec' => $this->input->post('kec'),
@@ -157,6 +158,7 @@
                         'email' => $user['email'],
                         'name' => $user['name'],
                         'kode_peserta' => $user['kode_peserta'],
+                        'nama_toko' => $user['name_store'],
                     ];
 
                     $this->session->set_userdata($data);

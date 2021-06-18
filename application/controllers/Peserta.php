@@ -54,6 +54,7 @@
 						
 						$neme_produk = $_FILES['gambar_cake']['name'];
 						$kode_peserta = $this->session->kode_peserta;
+						$nama_toko = $this->session->nama_toko;
 
 						$kode = rand(1, 100000);
 						$kode_produk = "PR".$kode;
@@ -61,6 +62,7 @@
 						$data = array(
 							'kode_produk' =>$kode_produk,
 							'kode_peserta' => $kode_peserta,
+							'nama_toko' => $nama_toko,
 							'judul_produk' => $this->input->post('judul'),
 							'keterangan' => $this->input->post('keterangan'),
 							'gambar_produk' => $neme_produk,
