@@ -36,7 +36,7 @@
                       <div class="card-body">
                         <h5 class="card-title">CAKE UPLOAD </h5>
                         <p class="card-text" style="font-size: 50px; color: red;"><i class="fas fa-birthday-cake"></i> Available</p>
-                        <a href="#" class="btn btn-dark">Upload Ceke</a>
+                        <a href="<?= base_url('upload/') ?>" class="btn btn-dark">Upload Ceke</a>
                       </div>
                     </div>
                   </div>
@@ -45,7 +45,7 @@
                       <div class="card-body">
                         <h5 class="card-title" >CAKE PROFILE</h5>
                         <p class="card-text" style="font-size: 50px; color: red;"><i class="fas fa-user-tag"></i> </p>
-                        <a href="#" class="btn btn-dark">Profile</a>
+                        <a href="<?= base_url('profil/') ?>" class="btn btn-dark">Profile</a>
                       </div>
                     </div>
                   </div>

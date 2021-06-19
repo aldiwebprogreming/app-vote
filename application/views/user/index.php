@@ -186,7 +186,15 @@
 
                              <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> <?php   echo $kabupaten['name']; ?></p>
                              <center>
-                                <p><i class="fas fa-heart"> 234 Vote</i></p>
+
+                                <?php 
+
+                                    $kp = $data['kode_produk'];
+                                    $vote2 = $this->db->get_where('tbl_vote', array('kode_produk' => $kp))->num_rows();
+
+                                 ?>
+
+                                <p><i class="fas fa-heart"> <?= $vote2 ?></i></p>
                                
                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter<?= $data['id']  ?>"><i class="fas fa-heart"></i></button>
                                  <a class="btn btn-primary" href="<?= base_url("produk/detail/") ?><?= $data['kode_produk'] ?>"><i class="fas fa-eye"></i></a>

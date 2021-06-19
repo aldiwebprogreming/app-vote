@@ -9,7 +9,11 @@
 		function __construct()
 		{
 			parent::__construct();
+			if ($this->session->userdata('name') == NULL) {
+				redirect('login/');
+			}
 			$this->load->library('form_validation');
+
 		}
 
 		function index(){
@@ -115,6 +119,8 @@
 
 
 			$data['cake'] = $this->db->get_where('tbl_produk',array('kode_peserta' => $kode_peserta))->row_array();
+
+			$data['cek'] = $this->db->get_where('tbl_produk',array('kode_peserta' => $kode_peserta))->num_rows();
 
 
 			$this->load->view('template/header2');

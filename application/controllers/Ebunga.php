@@ -18,6 +18,15 @@
 			$data['title'] = "ebunga";
 			$data['produk'] = $this->db->get('tbl_produk')->result_array();
 
+			foreach ($data['produk'] as $vote) {
+				$kp = $vote['kode_produk'];
+
+				$data['vote2'] = $this->db->get_where('tbl_vote', array('kode_produk' => $kp ))->num_rows();
+				
+
+			}
+
+
 			$this->load->view('template/header', $data);
 			$this->load->view('user/index', $data);
 			$this->load->view('template/footer');
@@ -67,7 +76,18 @@
 		function detail($slug){
 
 
-			$data['detail'] = $this->db->get_where('tbl_produk',  array('kode_produk' => $slug))->result_array();	
+			$data['data'] = $this->db->get_where('tbl_produk',  array('kode_produk' => $slug))->row_array();
+
+			$kp = $data['data']['kode_peserta'];
+			$kpr = $data['data']['kode_produk'];
+
+			$kab = $this->db->get_where('tbl_registrasi_peserta',array('kode_peserta' => $kp))->row_array();
+			$kab2 = $kab['kab'];
+
+			$data['kab'] = $this->db->get_where('tbl_kabupaten', array('id' => $kab2))->row_array();
+			$data['vote'] = $this->db->get_where('tbl_vote', array('kode_produk' => $kpr))->num_rows();
+
+
 			$this->load->view('template/header');
 			$this->load->view('user/detail', $data);
 			$this->load->view('template/footer');

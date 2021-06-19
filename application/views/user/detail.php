@@ -42,9 +42,7 @@
                     </div>
                 </div>
 
-                <?php foreach ($detail as $data) {
-                   
-                } ?>
+               
              
                 <div class="row class-container">
                        
@@ -126,6 +124,11 @@
                                   <td><?= $data['kode_produk'] ?></td>
                                 </tr>
 
+                                <tr>
+                                  <th scope="row">Nama Toko</th>
+                                  <td><?= $data['nama_toko'] ?></td>
+                                </tr>
+
                                  <tr>
                                   <th scope="row">Judul Produk</th>
                                   <td><?= $data['judul_produk'] ?></td>
@@ -135,6 +138,20 @@
                                   <th scope="row">Keterangan Produk</th>
                                   <td><?= $data['keterangan'] ?></td>
                                 </tr>
+
+
+
+
+                                 <tr>
+                                  <th scope="row">Kabupaten</th>
+                                  <td><?= $kab['name'] ?></td>
+                                </tr>
+
+                                 <tr>
+                                  <th scope="row">Jumlah Vote</th>
+                                  <td><?= $vote ?> <i class="fas fa-heart" style="color: red;"></i></td>
+                                </tr>
+                                
                                 
                               </tbody>
                             </table>

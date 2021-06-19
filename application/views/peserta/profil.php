@@ -32,7 +32,14 @@
                     <div class="card">
                       <div class="card-body">
                        <div>
+
+                        <?php if ($cek == 0) { ?>
+                          
+                          <img src="<?= base_url('assets/img/noimage.jpg') ?>" alt="..." class="img-thumbnail">
+                        
+                      <?php } else { ?>
                         <img src="<?= base_url('produk/') ?><?= $cake['gambar_produk'] ?>" alt="..." class="img-thumbnail">
+                    <?php } ?>
                         </div>
                       </div>
                     </div>
@@ -41,13 +48,27 @@
                     <div class="card">
                       <div class="card-body">
                           <div id="share-sossial-buttons">
+
+                            <?php 
+
+                              if ($cek == 0) { 
+
+                                echo "<h3>". "Produk anda tidak ada". "</h3>";
+                                echo "<hr>";
+                                
+                              } else {
+
+                             ?>
     
-   Share to :<br>
+                                Share to :<br>
 
    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60cc55383e9275e2"></script>
+                                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60cc55383e9275e2"></script>
 
-<!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox_bbi3"></div>
+<!-- Go to www.addthis.com/dashboard to customize your tools --> 
+                                         <div class="addthis_inline_share_toolbox_bbi3"></div>
+
+
  
     <!-- Untuk Facebook -->
    <!--  <a href="http://www.facebook.com/sharer.php?u=https://www.kerincicreative.com/shop-single.php?id=13" target="_blank">
@@ -69,7 +90,7 @@
 
     
 
-</div>
+                    </div>
                         
                        
 
@@ -79,6 +100,8 @@
                                 <button class="btn btn-primary" onclick="myFunction()"><i class="fas fa-copy"></i></button>
                             </div>
                           </div>
+
+                           <?php } ?>
 
                         <h5 class="card-title">PROFILE </h5>
                         
