@@ -41,7 +41,8 @@
 
 
                     <div class="col-lg-6 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-                          <h3 class="text-center"> <i class="fas fa-user"></i> Register Account </h3>
+                          <h3 class="text-center"> <i class="fas fa-user"></i> Registration Account </h3>
+                          <br>
                         <div class="card" style="border-width: 5px; border-color: pink; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                           <div class="card-body">
                                 <form method="post" action="<?= base_url("ebunga/registrasi") ?>">

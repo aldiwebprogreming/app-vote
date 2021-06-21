@@ -146,20 +146,27 @@
                  <!--    <p>Our Classes</p> -->
                     <h2>Competition Product</h2>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                       <!--  <ul id="class-filter">
-                            <li data-filter="*" class="filter-active">All Classes</li>
-                            <li data-filter=".filter-1">Pilates Yoga</li>
-                            <li data-filter=".filter-2">Hatha Yoga</li>
-                            <li data-filter=".filter-3">Vinyasa yoga</li>
-                        </ul> -->
+                <div class="row mb-5">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                         <div class="input-group">
+                              <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" style="width: 100px;" placeholder="Cari cake......." name="cari" id="cari">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><button id="klik"><li class="fas fa-search"></li></button></span>
+                              
+                              </div>
+                            </div>
                     </div>
+                    <div class="col-md-2"></div>
                 </div>
 
+
+               
+
              
-                <div class="row class-container">
+                <div class="row class-container" >
                        <?php foreach ($produk as $data) { ?>
+
                     <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
 
                         <div class="card" style="width: 20rem;border-radius:20px; border-width: 6px; border-color: pink; ">
@@ -250,18 +257,17 @@
                     </div>
                     
                 <?php } ?>
+                
+                </div>
+             
 
-
-
-                 
-                    
+                <?php echo $pagination; ?>
                     
                 </div>
             </div>
         </div>
 
 
-          <?php echo $pagination; ?> 
         <!-- Class End -->
         
         
@@ -449,124 +455,83 @@
                 
             </div>
         </div>
-        <!-- Team End -->
 
 
-        <!-- Blog Start -->
-       <!--  <div class="blog">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>From Blog</p>
-                    <h2>Latest Yoga Articles</h2>
-                </div>
-                <div class="owl-carousel blog-carousel wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-1.jpg" alt="Blog">
-                        </div>
-                        <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-2.jpg" alt="Blog">
-                        </div>
-                        <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-3.jpg" alt="Blog">
-                        </div>
-                        <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-4.jpg" alt="Blog">
-                        </div>
-                        <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-5.jpg" alt="Blog">
-                        </div>
-                        <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-6.jpg" alt="Blog">
-                        </div>
-                        <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Blog End -->
 
 
-        <!-- Footer Start -->
+    
+
+
+
+
+
+
+
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="<?= base_url('assets/') ?>lib/easing/easing.min.js"></script>
+        <script src="<?= base_url('assets/') ?>lib/wow/wow.min.js"></script>
+        <script src="<?= base_url('assets/') ?>lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="<?= base_url('assets/') ?>lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="<?= base_url('assets/') ?>lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="<?= base_url('assets/') ?>mail/jqBootstrapValidation.min.js"></script>
+        <script src="<?= base_url('assets/') ?>mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="<?= base_url('assets/') ?>js/main.js"></script>
+        <script src="<?= base_url('assets/') ?>alert.js"></script>
+        <?php echo "<script>".$this->session->flashdata('message')."</script>"?>
+         <script>
+          $(document).ready(function() {
+              $('#example').DataTable();
+              } );
+        </script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+<script type="text/javascript" src="<?= base_url('assets/') ?>js/jquery.paginate.js"></script>
+<script type="text/javascript">
+$(document).ready(function()    {
+    $('#example1').paginate({itemsPerPage: 2});
+    $('#example4').paginate({itemsPerPage: 3});
+    $('#example2').paginate({itemsPerPage: 3});
+    $('#example3').paginate({itemsPerPage: 10});
+
+    
+});
+</script>
+
+
+
+<script>
+    $(document).ready(function(){
+        $("#klik").click(function(){
+            var cari = $("#cari").val();
+            var a = slugify(cari);
+        })
+
+        function slugify(text) {
+        return text.toString().toLowerCase().replace(/\s+/g, '-') // Ganti spasi dengan -
+        .replace(/[^\w\-]+/g, '') // Hapus semua karakter non-word
+        .replace(/\-\-+/g, '-') // Ganti multiple - atau single -
+        .replace(/^-+/, '') 
+        .replace(/-+$/, '');
+} 
+        
+    })
+</script>
+    </body>
+</html>
+
+
+
+
+
+       
         

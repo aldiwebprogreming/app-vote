@@ -19,7 +19,7 @@
 
 		$config['base_url'] = site_url('ebunga/index'); //site url
         $config['total_rows'] = $this->db->count_all('tbl_produk'); //total row
-        $config['per_page'] = 2;  //show record per halaman
+        $config['per_page'] = 3;  //show record per halaman
         $config["uri_segment"] = 3;  // uri parameter
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);
@@ -52,10 +52,13 @@
 
         $data['pagination'] = $this->pagination->create_links();
 
+			// $data['produk'] = $this->db->get('tbl_produk')->result_array();
+
 
 			$this->load->view('template/header', $data);
 			$this->load->view('user/index', $data);
-			$this->load->view('template/footer');
+			$this->load->view('template/footer', $data);
+			
 		}
 
 		function vote(){
@@ -261,7 +264,23 @@
          $this->session->unset_userdata('name');
 
         redirect('login ');
+    } 
+
+
+    function pagination(){
+    	$this->load->view('user/pegi');
     }
+
+
+    function cari($cari){
+    	echo $cari;
+    }
+
+
+function pegi(){
+
+	$this->load->view('user/pegi');
+}
 
 
 	}

@@ -56,6 +56,7 @@ $route['produk/detail/(:any)'] ='ebunga/detail/$1';
 $route['ebunga/kab/(:any)'] ='ebunga/kab/$1';
 $route['ebunga/kec/(:any)'] ='ebunga/kec/$1';
 $route['ebunga/kel/(:any)'] ='ebunga/kel/$1';
+$route['ebunga/cari/(:any)'] ='ebunga/cari/$1';
 $route['registrasi'] ='ebunga/registrasi';
 $route['login'] ='ebunga/login';
 $route['logout'] ='ebunga/logout';
