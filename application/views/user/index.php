@@ -253,12 +253,15 @@
 
 
 
-                   <?php echo $pagination; ?> 
+                 
                     
                     
                 </div>
             </div>
         </div>
+
+
+          <?php echo $pagination; ?> 
         <!-- Class End -->
         
         
