@@ -140,8 +140,6 @@
                                 </tr>
 
 
-
-
                                  <tr>
                                   <th scope="row">Kabupaten</th>
                                   <td><?= $kab['name'] ?></td>

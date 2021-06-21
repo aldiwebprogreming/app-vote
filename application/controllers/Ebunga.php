@@ -10,21 +10,47 @@
 		{
 			parent:: __construct();	
 			 $this->load->library('form_validation');
+			  $this->load->library('pagination');
+			  $this->load->model('card');
 		}
 
 
 		function index(){
 
-			$data['title'] = "ebunga";
-			$data['produk'] = $this->db->get('tbl_produk')->result_array();
+		$config['base_url'] = site_url('ebunga/index'); //site url
+        $config['total_rows'] = $this->db->count_all('tbl_produk'); //total row
+        $config['per_page'] = 2;  //show record per halaman
+        $config["uri_segment"] = 3;  // uri parameter
+        $choice = $config["total_rows"] / $config["per_page"];
+        $config["num_links"] = floor($choice);
 
-			foreach ($data['produk'] as $vote) {
-				$kp = $vote['kode_produk'];
+        // Membuat Style pagination untuk BootStrap v4
+        $config['first_link']       = 'First';
+        $config['last_link']        = 'Last';
+        $config['next_link']        = 'Next';
+        $config['prev_link']        = 'Prev';
+        $config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
+        $config['full_tag_close']   = '</ul></nav></div>';
+        $config['num_tag_open']     = '<li class="page-item"><span class="page-link">';
+        $config['num_tag_close']    = '</span></li>';
+        $config['cur_tag_open']     = '<li class="page-item active"><span class="page-link">';
+        $config['cur_tag_close']    = '<span class="sr-only">(current)</span></span></li>';
+        $config['next_tag_open']    = '<li class="page-item"><span class="page-link">';
+        $config['next_tagl_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
+        $config['prev_tag_open']    = '<li class="page-item"><span class="page-link">';
+        $config['prev_tagl_close']  = '</span>Next</li>';
+        $config['first_tag_open']   = '<li class="page-item"><span class="page-link">';
+        $config['first_tagl_close'] = '</span></li>';
+        $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
+        $config['last_tagl_close']  = '</span></li>';
 
-				$data['vote2'] = $this->db->get_where('tbl_vote', array('kode_produk' => $kp ))->num_rows();
-				
+        $this->pagination->initialize($config);
+        $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
-			}
+        //panggil function get_mahasiswa_list yang ada pada mmodel mahasiswa_model. 
+        $data['produk'] = $this->card->get_produk($config["per_page"], $data['page'])->result_array();           
+
+        $data['pagination'] = $this->pagination->create_links();
 
 
 			$this->load->view('template/header', $data);
@@ -43,7 +69,10 @@
 			$email = $this->input->post('email');
 			$notlp = $this->input->post('notlp');
 
-			$cek = $this->db->get_where('tbl_vote',   array('email_vote' => $email))->num_rows();
+			$ip = $this->input->ip_address();
+
+			$cek = $this->db->query("SELECT * FROM tbl_vote WHERE email_vote='$email' OR ip_user ='$ip' ")->num_rows();
+
 
 			if ($cek >= 1) {
 				$this->session->set_flashdata('message', 'swal("Maaf!", "Anda sudah vote", "warning");');

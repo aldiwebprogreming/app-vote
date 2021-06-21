@@ -253,7 +253,7 @@
 
 
 
-                    
+                   <?php echo $pagination; ?> 
                     
                     
                 </div>
