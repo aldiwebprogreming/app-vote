@@ -58,7 +58,82 @@
                       </td>
 
                       <td>
-                        
+                        <?php 
+
+                          if ($data['status'] == 0) { ?>
+
+                                <!-- Button trigger modal -->
+                                  <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#exampleModalLongstatus<?= $data['id'] ?>">
+                                    Belum aktif
+                                  </button>
+
+                                  <!-- Modal -->
+                                  <div class="modal fade" id="exampleModalLongstatus<?= $data['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLongTitle">Pesan</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <h4>Apakah anda ingin mengaktifkan cake ini ?</h4>
+                                          <form method="post" action="<?= base_url('admin/aktifProduk') ?>">
+                                            
+                                            <input type="hidden" name="id_produk" value="<?= $data['id'] ?>"
+
+                                            >
+                                          
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                          <button type="submit" class="btn btn-primary">Submit</button>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                            <?php }else { ?>
+
+                               <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalLongstatus1<?= $data['id'] ?>">
+                                    Sudah aktif
+                                  </button>
+
+                                  <!-- Modal -->
+                                  <div class="modal fade" id="exampleModalLongstatus1<?= $data['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLongTitle">Pesan</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <h4>Apakah anda ingin menonaktifkan cake ini ?</h4>
+                                          <form method="post" action="<?= base_url('admin/nonaktifProduk') ?>">
+                                            <?php 
+                                                $name = $this->db->get_where('tbl_registrasi_peserta', array('kode_peserta' => $data['kode_peserta']))->row_array();
+                                               ?>
+                                            
+                                            <input type="hidden" name="id_produk" value="<?= $data['id'] ?>"
+                                            >
+                                             <input type="hidden" name="email" value="<?= $name['email'] ?>"
+                                            >
+                                          
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                          <button type="submit" class="btn btn-primary">Submit</button>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                            <?php } ?>
                       </td>
                     
                     <td>

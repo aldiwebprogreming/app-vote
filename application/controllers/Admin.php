@@ -187,6 +187,117 @@ class Admin extends CI_Controller
 	}
 
 
+	function aktifProduk(){
+		$id = $this->input->post('id_produk');
+		$email = 'alldii1956@gmail.com';
+
+			$data = [
+
+			'status' => 1,
+
+		];
+
+		$this->sendEmail3($email);
+
+		
+
+		$this->db->where('id', $id);
+		$this->db->update('tbl_produk', $data);
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Cake barhasil disetujui", "success");');
+			redirect('admin/sertifikat');
+
+	}
+
+
+	function nonaktifProduk(){
+		$id = $this->input->post('id_produk');
+
+			$data = [
+
+			'status' => 0,
+
+		];
+
+		
+
+		$this->db->where('id', $id);
+		$this->db->update('tbl_produk', $data);
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Cake barhasil di nonaktifkan", "success");');
+			redirect('admin/data-produk');
+
+	}
+
+
+	function sendEmail3($email){
+
+        $config = [
+            'protocol'  => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_user' => 'aldiiit593@gmail.com',
+            'smtp_pass' => 'aldimantap123',
+            'smtp_port' => 465,
+            'mailtype'  => 'html',
+            'charset'   => 'utf-8',
+            'newline'   => "\r\n"
+        ];
+
+			$this->load->library('email', $config);
+			$this->email->initialize($config);
+			$this->email->set_newline("\r\n");
+
+			$this->email->from('aldiiit593@gmail.com', 'ebunga vote');
+			$this->email->to("$email");
+
+			$this->email->subject('Sertfikat peserta lomba desain cake ebunga');
+			
+			$get1 = file_get_contents(base_url('email/sertifikat.php'));
+	      			
+
+			$this->email->message($get1);
+
+			if (!$this->email->send())
+			show_error($this->email->print_debugger());
+			else
+			echo 'Your e-mail has been sent!';
+	}
+
+
+	
+
+
+	function sertifikat(){
+
+
+		$this->load->library('dompdf_gen');
+
+		$this->load->view('peserta/cetak');
+ 		$paper_size ="A4";
+ 		$orientation = "landscape";
+ 		// $customPaper = array(0,0,360,360);
+ 		$html = $this->output->get_output();
+ 		$this->dompdf->set_paper($paper_size, $orientation);
+
+ 		$this->dompdf->load_html($html);
+ 		$this->dompdf->render();
+
+
+ 		//kode dibawah ini unutk menajalankan di server linux agar tidak error saat menreload ke pdf
+ 		ob_end_clean();
+
+
+ 		//end
+ 		$this->dompdf->stream("sertifikat", array('Attachment' => 0));
+
+		
+
+
+
+	}
+
+
+
+
+
 
 
 
