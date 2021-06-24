@@ -66,3 +66,12 @@ $route['profil'] = 'peserta/profil';
 $route['listvote'] = 'peserta/listVote';
 
 
+// route admin
+$route['admin/Dashboard'] ='admin/index';
+$route['admin/data-peserta'] ='admin/data_peserta';
+$route['admin/data-produk'] ='admin/data_produk';
+$route['admin/data-vote'] ='admin/data_vote';
+
+
+
+

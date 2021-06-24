@@ -26,16 +26,23 @@
                     <div class="card">
                       <div class="card-body">
                         <h5>VOTE</h5>
-                        <p class="card-text" style="font-size: 50px; color: red;"><i class="fas fa-heart"></i> 210</p><p>
-                        <a href="<?= base_url('listvote/') ?>" class="btn btn-dark">List Vote</a>
+                        <p class="card-text" style="font-size: 50px; color: red;"><i class="fas fa-heart"></i> <?= $vote ?></p><p>
+                        <a href="<?= base_url('listvote/') ?>" class="btn btn-dark">Daftar Vote</a>
                       </div>
                     </div>
                   </div>
                   <div class="col-sm-4 mt-3">
                     <div class="card">
                       <div class="card-body">
-                        <h5 class="card-title">CAKE UPLOAD </h5>
-                        <p class="card-text" style="font-size: 50px; color: red;"><i class="fas fa-birthday-cake"></i> Available</p>
+                        <h5 class="card-title">UPLOAD CAKE </h5>
+
+                        <?php if ($cake == 0) { ?>
+
+                             <p class="card-text" style="font-size: 50px; color: red;"><i class="fas fa-birthday-cake">Tidak tersedia</i> </p>
+
+                        <?php } else { ?>
+                        <p class="card-text" style="font-size: 50px; color: red;"><i class="fas fa-birthday-cake"> Tersedia </i> </p>
+                    <?php } ?>
                         <a href="<?= base_url('upload/') ?>" class="btn btn-dark">Upload Ceke</a>
                       </div>
                     </div>
@@ -43,9 +50,9 @@
                   <div class="col-sm-4 mt-3">
                     <div class="card">
                       <div class="card-body">
-                        <h5 class="card-title" >CAKE PROFILE</h5>
+                        <h5 class="card-title" > PROFIL CAKE </h5>
                         <p class="card-text" style="font-size: 50px; color: red;"><i class="fas fa-user-tag"></i> </p>
-                        <a href="<?= base_url('profil/') ?>" class="btn btn-dark">Profile</a>
+                        <a href="<?= base_url('profil/') ?>" class="btn btn-dark">Profil</a>
                       </div>
                     </div>
                   </div>

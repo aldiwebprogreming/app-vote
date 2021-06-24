@@ -42,22 +42,52 @@
                     </div>
                 </div>
 
-               
-             
+            
                 <div class="row class-container">
+
+
+
                        
                     <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+
+
 
                         <div class="card" style="border-width: 5px; border-color: pink;">
                           <div class="card-body">
                             <center>
-                            <img style="height: 200px; margin-bottom: 30px;" src="<?= base_url("produk/") ?><?= $data['gambar_produk'] ?>" class="rounded float-left" alt="product">
+
+                                <div class="sample1">
+                                <div class="carousel">
+                                  <ul>
+                                    <li> <img src="<?= base_url("produk/") ?><?= $data['gambar_produk'] ?>" alt="1"> </li>
+                                    <li> <img src="<?= base_url("produk/") ?><?= $data['gambar_produk2'] ?>" alt="2"> </li>
+                                    <li> <img src="<?= base_url("produk/") ?><?= $data['gambar_produk3'] ?>" alt="3"> </li>
+                                    
+                                  </ul>
+                                  <div class="controls">
+                                    <div class="prev"></div>
+                                    <div class="next"></div>
+                                  </div>
+                                </div>
+
+                                <div class="thumbnails">
+                                    
+                                  <ul>
+                                     <li> <img src="<?= base_url("produk/") ?><?= $data['gambar_produk'] ?>" alt="1"> </li>
+                                    <li> <img src="<?= base_url("produk/") ?><?= $data['gambar_produk2'] ?>" alt="2"> </li>
+                                    <li> <img src="<?= base_url("produk/") ?><?= $data['gambar_produk3'] ?>" alt="3"> </li>
+                                  </ul>
+
+                                </div>
+                              </div>
+  
+                            
                             </center>
                             <div class="mt-4">
                                 <button type="button" class="btn btn-outline-danger btn-sm btn-lg btn-block" data-toggle="modal" data-target="#exampleModalCenter<?= $data['id']  ?>">Vote</button>
 
 
-                                <a href="<?= base_url("/") ?>" class="btn btn-outline-primary btn-sm btn-lg btn-block">Kembali</a>
+                            <a href="<?= base_url("/") ?>" class="btn btn-outline-primary btn-sm btn-lg btn-block">Kembali</a>
                                 
                             </div>
                           </div>
@@ -78,7 +108,7 @@
                                 </button>
                               </div>
                               <div class="modal-body">
-                                <form method="post" action="<?= base_url("ebunga/vote") ?>">
+                                <form method="post" action="<?= base_url("ebunga/vote_detail") ?>">
 
                                         <input type="hidden" name="kode_produk" value="<?= $data['kode_produk'] ?>">
                                          <input type="hidden" name="kode_peserta" value="<?= $data['kode_peserta'] ?>">
@@ -95,6 +125,8 @@
                                       <div class="form-group">
                                         <input type="number" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter No telp" name="notlp" required=""> 
                                       </div>
+
+
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -107,7 +139,7 @@
 
 
 
-                    <div class="col-lg-8 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="col-lg-6 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
 
                         <div class="card" style="border-width: 5px; border-color: pink;">
                           <div class="card-body">
@@ -170,6 +202,12 @@
                 </div>
             </div>
         </div>
+
+
+
+
+  
+
         <!-- Class End -->
         
         

@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Profile Product</h2>
+                        <h2>Profil Produk</h2>
                     </div>
                     <div class="col-12 mt-3">
                         <a href="<?= base_url('dashboard/') ?>">Home</a>
@@ -53,7 +53,10 @@
 
                               if ($cek == 0) { 
 
-                                echo "<h3>". "Produk anda tidak ada". "</h3>";
+                                echo '<div class="alert alert-warning" role="alert">
+                                Produk anda belum tersdiah, <b>segera upload cake anda.</b>
+                              </div>';
+
                                 echo "<hr>";
                                 
                               } else {
@@ -95,7 +98,7 @@
                        
 
                          <div class="input-group mb-3">
-                           <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" value="http://localhost/app-vote/produk/detail/PR002" id="myInput">
+                           <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" value="http://localhost/app-vote/produk/detail/<?= $cake['kode_produk'] ?>" id="myInput">
                                <div class="input-group-append">
                                 <button class="btn btn-primary" onclick="myFunction()"><i class="fas fa-copy"></i></button>
                             </div>

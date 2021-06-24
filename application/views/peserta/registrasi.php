@@ -1,4 +1,10 @@
 
+<div class="preloader" style="display: none">
+      <div class="loading">
+        <img src="<?= base_url() ?>loading/loadbaru.gif" width="400">
+        
+      </div>
+    </div>
         <!-- Nav Bar End -->
 
 
@@ -8,7 +14,7 @@
                 <div class="row align-items-center">
                     <div class="col-sm-12 col-md-12">
                         <div class="text-center mt-4">
-                            <h1 style="text-align: center;">Participant Registration</h1>
+                            <h1 style="text-align: center;">Pendaftaran Peserta</h1>
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
                             </p>
@@ -41,13 +47,13 @@
 
 
                     <div class="col-lg-6 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-                          <h3 class="text-center"> <i class="fas fa-user"></i> Registration Account </h3>
+                          <h3 class="text-center"> <i class="fas fa-user"></i> Daftar Akun </h3>
                           <br>
                         <div class="card" style="border-width: 5px; border-color: pink; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                           <div class="card-body">
                                 <form method="post" action="<?= base_url("ebunga/registrasi") ?>">
                                   <div class="form-group">
-                                    <label for="exampleInputEmail1">Name</label>
+                                    <label for="exampleInputEmail1">Nama Lengkap</label>
                                     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"   name="name" value="<?= set_value('name'); ?>">
                                      <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                                     
@@ -73,7 +79,7 @@
                                 <br>
 
                                  <div class="form-group">
-                                    <label for="">Name Store</label>
+                                    <label for="">Nama Toko</label>
                                     <input type="text" class="form-control" name="name_store" value="<?= set_value('name_store'); ?>">
                                      <?= form_error('name_store', '<small class="text-danger pl-3">', '</small>'); ?>
                                   </div>
@@ -128,12 +134,12 @@
                                     </div>
                                     
                                     <div class="form-group col-md-6">
-                                      <label for="kelurahan">Confirm password</label>
+                                      <label for="kelurahan">Ulangi Password</label>
                                         <input type="password" name="pass2" class="form-control" >
                                     </div>
                                   </div>
 
-                                  <button type="submit" class="btn btn-dark btn-lg btn-block">Register</button>
+                                  <button id="register" type="submit" class="btn btn-dark btn-lg btn-block">Daftar</button>
                                 </form>
                             
                           </div>
@@ -503,6 +509,14 @@
                     var id_kec = $(this).val();
                     var url = "<?= base_url('ebunga/kel') ?>/"+id_kec;
                     $("#kelurahan").load(url);
+                })
+            })
+
+
+             $(document).ready(function(){
+
+                $("#register").click(function(){
+                    $(".preloader").show();
                 })
             })
         </script>

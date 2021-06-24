@@ -6,11 +6,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Login participant</h2>
+                        <h2>Login Peserta</h2>
                     </div>
                     <div class="col-12 mt-3">
                         <a href="<?= base_url('/') ?>">Home</a>
-                        <a href="<?= base_url('registrasi/') ?>">Register</a>
+                        <a href="<?= base_url('registrasi/') ?>">Daftar</a>
                     </div>
                 </div>
             </div>
@@ -22,12 +22,15 @@
         <div class="about wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-5 col-md-6">
+                    <div class="col-lg-5 col-md-6"> 
+                        
+                          <?= $this->session->flashdata('alert'); ?>
+
                        <div class="card" style="border-width: 5px; border-color: pink; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 20px;">
 						  <div class="card-body">
 						    <form method="post" action="<?= base_url('ebunga/login') ?>">
 								  <div class="form-group">
-								    <label for="exampleInputEmail1">Email address</label>
+								    <label for="exampleInputEmail1">Alamat Email</label>
 								    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
 								    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 								      <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
@@ -46,7 +49,7 @@
                     <div class="col-lg-7 col-md-6 mt-5">
                         <div class="section-header text-left">
                           
-                            <h2>Login for upload product</h2>
+                            <h2>Login untuk upload produk</h2>
                         </div>
                         <div class="about-text">
                             <p>

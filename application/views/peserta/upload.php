@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Uplaod Product</h2>
+                        <h2>Uplaod Produk Cake</h2>
                     </div>
                     <div class="col-12 mt-3">
                         <a href="<?= base_url('dashboard/') ?>">Home</a>
@@ -38,25 +38,56 @@
                   <div class="col-sm-8 mt-3">
                     <div class="card">
                       <div class="card-body">
-                        <h5 class="card-title">CAKE UPLOAD </h5>
+                        <h5 class="card-title"> <i class="fas fa-birthday-cake"></i> Halaman Upload Cake </h5>
+                        <hr>
                         
-                                <form method="POST" action="" enctype="multipart/form-data">
+                            <form method="POST" action="" enctype="multipart/form-data">
                               <div class="form-group">
-                                <label for="exampleInputEmail1">Product title</label>
+                                <label for="exampleInputEmail1">Judul Cake</label>
                                 <input type="text" class="form-control" name="judul" value="<?= set_value('judul'); ?>" >
                                 <?= form_error('judul', '<small class="text-danger pl-3">', '</small>'); ?>
                               </div>
                               <div class="form-group">
-                                <label for="exampleInputPassword1">Description product</label>
+                                <label for="exampleInputPassword1">Keterangan Produk</label>
                                 <textarea class="form-control" name="keterangan"><?= set_value('keterangan'); ?></textarea>
                                 <?= form_error('keterangan', '<small class="text-danger pl-3">', '</small>'); ?>
                               </div>
 
                                <div class="form-group">
-                                <label>Images product</label>
+                                <label>Gambar Cake</label>
                                 <input type="file" v-on:change="upload($event)" name="gambar_cake"  class="form-control" required="">
                               
                               </div>
+
+
+                               <div class="form-group">
+                                <label>Gambar Cake Sisi 1</label>
+                                <input type="file" v-on:change="upload2($event)" name="gambar_cake2"  class="form-control" required="">
+                              </div>
+
+
+                                <div v-if="preview2">
+                                  <img :src="preview2" alt="..." class="img-thumbnail" style="height: 100px;">
+                                </div>
+
+
+
+
+                               <div class="form-group">
+                                <label>Gambar Cake Sisi 2</label>
+                                <input type="file" v-on:change="upload3($event)" name="gambar_cake3"  class="form-control" required="">
+                              </div>
+
+                                <div v-if="preview3">
+                                  <img :src="preview3" alt="..." class="img-thumbnail" style="height: 100px;">
+                                </div>
+
+                                 
+                              
+                              </div>
+
+
+
                               
                               <button type="submit" class="btn btn-dark">Upload</button>
                             </form>

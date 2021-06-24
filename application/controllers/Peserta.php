@@ -18,8 +18,13 @@
 
 		function index(){
 
+			$kode_peserta = $this->session->kode_peserta;
+			$data['vote'] = $this->db->get_where('tbl_vote', array('kode_peserta' =>$kode_peserta ))->num_rows();
+
+			$data['cake'] = $this->db->get_where('tbl_produk', array('kode_peserta' =>$kode_peserta ))->num_rows();
+
 			$this->load->view('template/header2');
-			$this->load->view('peserta/dashboard');
+			$this->load->view('peserta/dashboard', $data);
 			$this->load->view('template/footer');
 		}
 
@@ -49,28 +54,60 @@
 					$config['max_width']            = 10240;
 					$config['max_height']           = 76800;
 
+					$config['upload_path']          = './produk/';
+					$config['allowed_types']        = 'gif|jpg|png';
+					$config['max_size']             = 10000;
+					$config['max_width']            = 10240;
+					$config['max_height']           = 76800;
+
+
+					$config['upload_path']          = './produk/';
+					$config['allowed_types']        = 'gif|jpg|png';
+					$config['max_size']             = 10000;
+					$config['max_width']            = 10240;
+					$config['max_height']           = 76800;
+
+
+
 					$this->load->library('upload', $config);
 
 					if ( ! $this->upload->do_upload('gambar_cake')){
 						$error = array('error' => $this->upload->display_errors());
 						$this->load->view('v_upload', $error);
-					}else{
+					}elseif (! $this->upload->do_upload('gambar_cake2')) {
+						$error = array('error' => $this->upload->display_errors());
+						$this->load->view('v_upload', $error);
+						
+					}elseif (! $this->upload->do_upload('gambar_cake3')) {
+						$error = array('error' => $this->upload->display_errors());
+						$this->load->view('v_upload', $error);
+					}
+					else{
 						
 						$neme_produk = $_FILES['gambar_cake']['name'];
+						$neme_produk2 = $_FILES['gambar_cake2']['name'];
+						$neme_produk3 = $_FILES['gambar_cake3']['name'];
+
+
 						$kode_peserta = $this->session->kode_peserta;
 						$nama_toko = $this->session->nama_toko;
 
 						$kode = rand(1, 100000);
 						$kode_produk = "PR".$kode;
 
+						$slug = strtolower($nama_toko);
+						$slug_toko = str_replace(" ", "-", $slug);
+
 						$data = array(
 							'kode_produk' =>$kode_produk,
 							'kode_peserta' => $kode_peserta,
 							'nama_toko' => $nama_toko,
+							'slug_toko' => $slug_toko,
 							'judul_produk' => $this->input->post('judul'),
 							'keterangan' => $this->input->post('keterangan'),
 							'gambar_produk' => $neme_produk,
-
+							'gambar_produk2' => $neme_produk2,
+							'gambar_produk3' => $neme_produk3,
 						);
 
 						$cek = $this->db->get_where('tbl_produk', array('kode_peserta' => $kode_peserta ))->num_rows();

@@ -17,6 +17,9 @@
 
 		function index(){
 
+
+	
+
 		$config['base_url'] = site_url('ebunga/index'); //site url
         $config['total_rows'] = $this->db->count_all('tbl_produk'); //total row
         $config['per_page'] = 3;  //show record per halaman
@@ -29,7 +32,7 @@
         $config['last_link']        = 'Last';
         $config['next_link']        = 'Next';
         $config['prev_link']        = 'Prev';
-        $config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
+        $config['full_tag_open']    = '<div id="next" class="pagging text-center"><nav><ul class="pagination justify-content-center">';
         $config['full_tag_close']   = '</ul></nav></div>';
         $config['num_tag_open']     = '<li class="page-item"><span class="page-link">';
         $config['num_tag_close']    = '</span></li>';
@@ -105,6 +108,9 @@
 
 		}
 
+
+
+
 		function detail($slug){
 
 
@@ -123,6 +129,52 @@
 			$this->load->view('template/header');
 			$this->load->view('user/detail', $data);
 			$this->load->view('template/footer');
+
+		}
+
+		function vote_detail(){
+
+
+
+
+			$kode_produk = $this->input->post('kode_produk');
+			$kode_peserta = $this->input->post('kode_peserta');
+			$name = $this->input->post('name');
+			$email = $this->input->post('email');
+			$notlp = $this->input->post('notlp');
+
+			$ip = $this->input->ip_address();
+
+			$cek = $this->db->query("SELECT * FROM tbl_vote WHERE email_vote='$email' OR ip_user ='$ip' ")->num_rows();
+
+
+			if ($cek >= 1) {
+				$this->session->set_flashdata('message', 'swal("Maaf!", "Anda sudah vote", "warning");');
+
+				$url = "http://localhost/app-vote/produk/detail/$kode_produk";
+
+			redirect($url);
+				
+			} else {
+
+			$data = array(
+			'kode_peserta' => $kode_peserta ,
+			'kode_produk' => $kode_produk,
+			'jumlah_vote' => 1,
+			'ip_user' => $this->input->ip_address(),
+			'name_vote' =>$name,
+			'email_vote' => $email,
+			'notlp_vote' => $notlp,
+		
+			 );
+
+
+			$input = $this->db->insert('tbl_vote', $data);
+			$this->session->set_flashdata('message', 'swal("Sukses!", "Vote success", "success");');
+			redirect('/');
+
+		}
+
 
 		}
 
@@ -167,6 +219,11 @@
 				
 			 );
 
+			$email =  $this->input->post('email');
+			$kode = $kode_peserta;
+
+			$this->sendEmail($email, $kode);
+
 			$input = $this->db->insert('tbl_registrasi_peserta', $data);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please activate your account</div>');
 				$this->session->set_flashdata('message', 'swal("Congratulation! your account has been created.", "Please activate your account", "success");');
@@ -175,6 +232,42 @@
 		}
 
 		}
+
+		function sendEmail($email, $kode){
+
+        $config = [
+            'protocol'  => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_user' => 'aldiiit593@gmail.com',
+            'smtp_pass' => 'aldimantap123',
+            'smtp_port' => 465,
+            'mailtype'  => 'html',
+            'charset'   => 'utf-8',
+            'newline'   => "\r\n"
+        ];
+
+			$this->load->library('email', $config);
+			$this->email->initialize($config);
+			$this->email->set_newline("\r\n");
+
+			$this->email->from('aldiiit593@gmail.com', 'ebunga vote');
+			$this->email->to("$email");
+
+			$this->email->subject('ebunga cake');
+
+			
+			
+			$get1 = file_get_contents(base_url("email/email3.php?id=$email&&kd=$kode"));
+	      			
+
+			$this->email->message("$get1");
+
+			if (!$this->email->send())
+			show_error($this->email->print_debugger());
+			else
+			echo 'Your e-mail has been sent!';
+	}
+
 
 
 		function login(){
@@ -273,7 +366,12 @@
 
 
     function cari($cari){
-    	echo $cari;
+    	
+    	$data['cari'] = $this->db->query("SELECT * FROM tbl_produk WHERE slug_toko LIKE '$cari%'")->result_array();
+
+    	$this->load->view('user/search', $data);
+
+    	
     }
 
 
@@ -281,6 +379,35 @@ function pegi(){
 
 	$this->load->view('user/pegi');
 }
+
+
+
+function verifikasi(){
+
+
+		$kd = $this->input->get('kd');
+		
+
+		$data = [
+
+			'is_active' => 1,
+
+		];
+		$this->db->where('kode_peserta', $kd);
+		$this->db->update('tbl_registrasi_peserta', $data);
+		$this->session->set_flashdata('alert', '
+			<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Akun terverifikasi!!</strong> silahkan login dan masukan email dan password anda dengan benar.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>');
+			redirect('login/');
+
+}
+
+
+
 
 
 	}

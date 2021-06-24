@@ -33,6 +33,15 @@
 
         <!-- Template Stylesheet -->
         <link href="<?= base_url('assets/') ?>css/style.css?v=1.0" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>loading/style.css?v2">
+
+
+        <!-- link slide img -->
+        <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        <link href="<?= base_url('assets/slide_img/') ?>light-carousel.css" rel="stylesheet" type="text/css">
+
+        
     </head>
 
     
@@ -48,7 +57,7 @@
 }
     </style>
 
-    <body>
+    <body style="background:#e2e8f0">
         <!-- Top Bar Start -->
         <div class="top-bar d-none d-md-block">
             <div class="container-fluid">

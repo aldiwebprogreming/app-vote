@@ -13,8 +13,8 @@
                                 Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
                             </p>
                             <div class="hero-btn">
-                                <a class="btn" href="">Join Now</a>
-                                <a class="btn" href="">Vote Cake</a>
+                                <a class="btn" href="<?= base_url('registrasi') ?>">Join Now</a>
+                                <a class="btn" id="btnklik" href="#vote">Vote Cake</a>
                             </div>
                         </div>
                     </div>
@@ -140,7 +140,7 @@
 
 
         <!-- Class Start -->
-        <div class="class">
+        <div class="class" id="vote">
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                  <!--    <p>Our Classes</p> -->
@@ -152,7 +152,7 @@
                          <div class="input-group">
                               <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" style="width: 100px;" placeholder="Cari cake......." name="cari" id="cari">
                               <div class="input-group-append">
-                                <span class="input-group-text"><button id="klik"><li class="fas fa-search"></li></button></span>
+                                <span class="input-group-text"><button class="btn btn-dark btn-sm" id="klik"><li class="fas fa-search"></li></button></span>
                               
                               </div>
                             </div>
@@ -161,7 +161,7 @@
                 </div>
 
 
-               
+               <div id="search">
 
              
                 <div class="row class-container" >
@@ -199,10 +199,50 @@
                                     $kp = $data['kode_produk'];
                                     $vote2 = $this->db->get_where('tbl_vote', array('kode_produk' => $kp))->num_rows();
 
+                                    $time = $this->db->query("SELECT * FROM tbl_vote WHERE kode_produk='$kp' ORDER BY id DESC LIMIT 1")->row_array();
+
+
+                                   
+
+                                        $selisih = time() - strtotime($time['date_vote']) ;
+                                        $detik = $selisih ;
+                                        $menit = round($selisih / 60 );
+                                        $jam = round($selisih / 3600 );
+                                        $hari = round($selisih / 86400 );
+                                        $minggu = round($selisih / 604800 );
+                                        $bulan = round($selisih / 2419200 );
+                                        $tahun = round($selisih / 29030400 );
+                                        if ($detik <= 60) {
+                                            $waktu = $detik.' detik yang lalu';
+                                        } else if ($menit <= 60) {
+                                            $waktu = $menit.' menit yang lalu';
+                                        } else if ($jam <= 24) {
+                                            $waktu = $jam.' jam yang lalu';
+                                        } else if ($hari <= 7) {
+                                            $waktu = $hari.' hari yang lalu';
+                                        } else if ($minggu <= 4) {
+                                            $waktu = $minggu.' minggu yang lalu';
+                                        } else if ($bulan <= 12) {
+                                            $waktu = $bulan.' bulan yang lalu';
+                                        } else {
+                                            $waktu = $tahun.' tahun yang lalu';
+                                        }
+                                         $waktu;
+                                 
+
+                                  
+ 
+
+
                                  ?>
 
                                 <p><i class="fas fa-heart"> <?= $vote2 ?></i></p>
-                               
+
+                                <?php if ($vote2 == 0) { ?>
+
+                                <?php } else{ ?>
+                                <p><i class="fas fa-like"></i> <b>Disukuai</b> <?= $waktu ?></p>
+                               <?php } ?>
                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter<?= $data['id']  ?>"><i class="fas fa-heart"></i></button>
                                  <a class="btn btn-primary" href="<?= base_url("produk/detail/") ?><?= $data['kode_produk'] ?>"><i class="fas fa-eye"></i></a>
                                 
@@ -259,6 +299,8 @@
                 <?php } ?>
                 
                 </div>
+
+           
              
 
                 <?php echo $pagination; ?>
@@ -266,6 +308,8 @@
                 </div>
             </div>
         </div>
+
+          </div>
 
 
         <!-- Class End -->
@@ -514,7 +558,11 @@ $(document).ready(function()    {
         $("#klik").click(function(){
             var cari = $("#cari").val();
             var a = slugify(cari);
+           var url = "<?= base_url('ebunga/cari') ?>/"+a;
+            $("#search").load(url);
+           
         })
+
 
         function slugify(text) {
         return text.toString().toLowerCase().replace(/\s+/g, '-') // Ganti spasi dengan -

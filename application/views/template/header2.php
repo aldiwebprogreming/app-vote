@@ -44,7 +44,7 @@
 }
     </style>
 
-    <body>
+    <body style="background:#e2e8f0">
         <!-- Top Bar Start -->
         <div class="top-bar d-none d-md-block">
             <div class="container-fluid">
