@@ -81,15 +81,8 @@
                                 <div v-if="preview3">
                                   <img :src="preview3" alt="..." class="img-thumbnail" style="height: 100px;">
                                 </div>
-
-                                 
                               
-                              </div>
-
-
-
-                              
-                              <button type="submit" class="btn btn-dark">Upload</button>
+                              <button type="submit" class="btn btn-dark btn-block">Upload</button>
                             </form>
 
                             
