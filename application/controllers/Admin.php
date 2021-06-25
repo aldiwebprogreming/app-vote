@@ -47,9 +47,17 @@ class Admin extends CI_Controller
 
 	function data_vote(){
 
-		$data['peserta'] = $this->db->get('tbl_vote')->result_array();
+		$data['vote'] = $this->db->get('tbl_vote')->result_array();
 		$this->load->view('template_admin/header');
-		$this->laod->view('admin/data_vote', $data);
+		$this->load->view('admin/data_vote', $data);
+		$this->load->view('template_admin/footer');
+	}
+
+	function data_visitor(){
+
+		$data['visitor'] = $this->db->get('tbl_visitor')->result_array();
+		$this->load->view('template_admin/header');
+		$this->load->view('admin/data_visitor', $data);
 		$this->load->view('template_admin/footer');
 	}
 
@@ -185,6 +193,29 @@ class Admin extends CI_Controller
 
 
 	}
+
+	function hapus_vote(){
+
+		$id = $this->input->post('id');
+		$this->db->where('id', $id);
+		$this->db->delete('tbl_vote');
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Data Berhasil di hapus", "success");');
+			redirect('admin/data-vote');
+
+
+	}
+
+	function hapus_visitor(){
+
+		$id = $this->input->post('id');
+		$this->db->where('id', $id);
+		$this->db->delete('tbl_visitor');
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Data Berhasil di hapus", "success");');
+			redirect('admin/data-visitor');
+
+
+	}
+
 
 
 	function aktifProduk(){

@@ -242,7 +242,7 @@
         
        <!--    <li class="nav-header">EXAMPLES</li> -->
           <li class="nav-item">
-            <a href="<?= base_url() ?>admin/data-peserata/" class="nav-link">
+            <a href="<?= base_url() ?>admin/data-peserta/" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Data peserta
@@ -279,6 +279,17 @@
               <i class="nav-icon fas fa-heart"></i>
               <p>
                 Data vote
+                <span class="badge badge-info right"></span>
+              </p>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="<?= base_url() ?>admin/data-visitor" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Data visitor
                 <span class="badge badge-info right"></span>
               </p>
             </a>

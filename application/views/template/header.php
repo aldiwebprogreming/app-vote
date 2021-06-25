@@ -1,3 +1,28 @@
+<?php 
+
+    $ip  = $this->input->ip_address(); // Mendapatkan IP user
+
+    $date  = date("Y-m-d"); // Mendapatkan tanggal sekarang
+    $waktu = time(); //\
+    $timeinsert = date("Y-m-d H:i:s");
+
+    // Cek berdasarkan IP, apakah user sudah pernah mengakses hari ini
+$s = $this->db->query("SELECT * FROM tbl_visitor WHERE ip='".$ip."' AND date='".$date."'")->num_rows();
+$ss = isset($s)?($s):0;
+
+//kalau belum ada simpan data ip
+if($ss == 0){
+$this->db->query("INSERT INTO tbl_visitor(ip, date, hits, online, time) VALUES('".$ip."','".$date."','1','".$waktu."','".$timeinsert."')");
+}
+
+// Jika sudah ada, update
+else{
+$this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE ip='".$ip."' AND date='".$date."'");
+}
+        
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>

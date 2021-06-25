@@ -269,10 +269,11 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                 <th>No</th>
-                  <th>Kode peserta</th>
-                  <th>Nama peserta</th>
-                  <th>No.telp</th>
+                  <th>No</th>
+                  <th>Kode produk</th>
+                  <th>Nama toko</th>
+                  <th>Judul produk</th>
+                  <th>Gambar</th>
                   <th>Status</th>
                   <th>Opsi</th>
                 </tr>

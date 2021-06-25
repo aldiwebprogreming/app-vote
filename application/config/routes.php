@@ -71,6 +71,7 @@ $route['admin/Dashboard'] ='admin/index';
 $route['admin/data-peserta'] ='admin/data_peserta';
 $route['admin/data-produk'] ='admin/data_produk';
 $route['admin/data-vote'] ='admin/data_vote';
+$route['admin/data-visitor'] ='admin/data_visitor';
 
 
 // route sertifikat
