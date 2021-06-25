@@ -39,7 +39,23 @@
                         
                       <?php } else { ?>
                         <img src="<?= base_url('produk/') ?><?= $cake['gambar_produk'] ?>" alt="..." class="img-thumbnail">
-                    <?php } ?>
+                          <?php 
+
+                              if ($cake['status'] == 0) {
+                                echo '<div class="alert alert-danger mt-3" role="alert"><b>Produk anda saat ini belum dapat di tampilkan di list kontes desain lomba cake ebunga.</b></div>';
+                              } else  { 
+                            
+                                $toko = $cake['slug_toko'];
+
+                               ?>
+
+                                <center>
+                                  <a href="<?= base_url("") ?>ebunga/sertifikat/<?= $toko ?>" target="_blank" class="mt-3 btn btn-info btn-block"><i class="fas fa-download"></i> Download sertifikat</a>
+                                </center>
+                              
+
+                           
+                    <?php } } ?>
                         </div>
                       </div>
                     </div>
@@ -54,7 +70,7 @@
                               if ($cek == 0) { 
 
                                 echo '<div class="alert alert-warning" role="alert">
-                                Produk anda belum tersdiah, <b>segera upload cake anda.</b>
+                                Produk anda belum tersdia, <b>segera upload cake anda.</b>
                               </div>';
 
                                 echo "<hr>";
@@ -62,6 +78,11 @@
                               } else {
 
                              ?>
+
+                             <?php if ($cake['status'] == 0) {
+
+                              
+                             }else { ?>
     
                                 Share to :<br>
 
@@ -104,7 +125,7 @@
                             </div>
                           </div>
 
-                           <?php } ?>
+                           <?php  } } ?>
 
                         <h5 class="card-title">PROFILE </h5>
                         

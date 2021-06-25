@@ -73,5 +73,11 @@ $route['admin/data-produk'] ='admin/data_produk';
 $route['admin/data-vote'] ='admin/data_vote';
 
 
+// route sertifikat
+
+$route['ebunga/sertifikat/(:any)'] = 'ebunga/sertifikat/$1';
+
+
+
 
 

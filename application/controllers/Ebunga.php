@@ -21,7 +21,7 @@
 	
 
 		$config['base_url'] = site_url('ebunga/index'); //site url
-        $config['total_rows'] = $this->db->count_all('tbl_produk'); //total row
+        $config['total_rows'] = $this->db->get_where('tbl_produk',array('status' => 1))->num_rows(); //total row
         $config['per_page'] = 3;  //show record per halaman
         $config["uri_segment"] = 3;  // uri parameter
         $choice = $config["total_rows"] / $config["per_page"];
@@ -405,6 +405,40 @@ function verifikasi(){
 			redirect('login/');
 
 }
+
+
+function sertifikat($toko){
+
+		// $data['nama'] = $this->input->get('nama');
+		// $data['email'] = $this->input->get('email');
+		// $data['kode'] = $this->input->get('kode');
+
+		$data['toko'] = $toko;
+		$this->load->library('dompdf_gen');
+
+		$this->load->view('peserta/cetak', $data);
+ 		$paper_size ="A4";
+ 		$orientation = "landscape";
+ 		// $customPaper = array(0,0,360,360);
+ 		$html = $this->output->get_output();
+ 		$this->dompdf->set_paper($paper_size, $orientation);
+
+ 		$this->dompdf->load_html($html);
+ 		$this->dompdf->render();
+
+
+ 		//kode dibawah ini unutk menajalankan di server linux agar tidak error saat menreload ke pdf
+ 		ob_end_clean();
+
+
+ 		//end
+ 		$this->dompdf->stream("sertifikat", array('Attachment' => 0));
+
+		
+
+
+
+	}
 
 
 

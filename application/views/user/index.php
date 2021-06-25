@@ -8,13 +8,13 @@
                 <div class="row align-items-center">
                     <div class="col-sm-12 col-md-6">
                         <div class="hero-text">
-                            <h1>Birthday cake design contest</h1>
+                            <h1>Lomba desain cake ebunga</h1>
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
                             </p>
                             <div class="hero-btn">
-                                <a class="btn" href="<?= base_url('registrasi') ?>">Join Now</a>
-                                <a class="btn" id="btnklik" href="#vote">Vote Cake</a>
+                                <a class="btn" href="<?= base_url('registrasi') ?>">Gabung sekarang</a>
+                                <a class="btn" id="btnklik" href="#vote">Vote cake</a>
                             </div>
                         </div>
                     </div>

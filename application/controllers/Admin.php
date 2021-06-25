@@ -190,6 +190,10 @@ class Admin extends CI_Controller
 	function aktifProduk(){
 		$id = $this->input->post('id_produk');
 		$email = 'alldii1956@gmail.com';
+		$data = $this->db->get_where('tbl_registrasi_peserta',  array('email' => $email))->row_array();
+		$nama = $data['name'];
+		$kode_peserta = $data['kode_peserta'];
+
 
 			$data = [
 
@@ -197,14 +201,14 @@ class Admin extends CI_Controller
 
 		];
 
-		$this->sendEmail3($email);
+		$this->sendEmailSertifikat($email, $nama, $kode_peserta);
 
 		
 
 		$this->db->where('id', $id);
 		$this->db->update('tbl_produk', $data);
 		$this->session->set_flashdata('message', 'swal("Sukses!", "Cake barhasil disetujui", "success");');
-			redirect('admin/sertifikat');
+			redirect('admin/data-produk');
 
 	}
 
@@ -228,7 +232,7 @@ class Admin extends CI_Controller
 	}
 
 
-	function sendEmail3($email){
+	function sendEmailSertifikat($email, $nama, $kode_peserta){
 
         $config = [
             'protocol'  => 'smtp',
@@ -250,7 +254,7 @@ class Admin extends CI_Controller
 
 			$this->email->subject('Sertfikat peserta lomba desain cake ebunga');
 			
-			$get1 = file_get_contents(base_url('email/sertifikat.php'));
+			$get1 = file_get_contents(base_url("email/sertifikat.php?email=$email&&nama=$nama&&kode=$kode_peserta"));
 	      			
 
 			$this->email->message($get1);
@@ -267,10 +271,14 @@ class Admin extends CI_Controller
 
 	function sertifikat(){
 
+		$data['nama'] = $this->input->get('nama');
+		$data['email'] = $this->input->get('email');
+		$data['kode'] = $this->input->get('kode');
+
 
 		$this->load->library('dompdf_gen');
 
-		$this->load->view('peserta/cetak');
+		$this->load->view('peserta/cetak', $data);
  		$paper_size ="A4";
  		$orientation = "landscape";
  		// $customPaper = array(0,0,360,360);

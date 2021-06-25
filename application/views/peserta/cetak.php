@@ -36,7 +36,7 @@ table tr:nth-child(even) {
 
 <img src="assets/sertifikat/sertifikat.jpg" style='width: 1020px; height: 700px; position: absolute; bottom: 20px; '> 
 
-<p style="position: absolute; top: 300px;  text-align: center; font-size: 30px;">ALDI</p>
+<p style="position: absolute; top: 300px;  text-align: center; font-size: 30px;"><?= $toko ?></p>
 
 
 
