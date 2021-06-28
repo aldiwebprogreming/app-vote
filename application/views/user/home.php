@@ -5,19 +5,19 @@
                 <div class="row align-items-center">
                     <div class="col-sm-12 col-md-6">
                         <div class="hero-text">
-                            <h1>Yoga Practice For Good Health</h1>
+                            <h1>Kontes desain cake ebunga</h1>
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
                             </p>
                             <div class="hero-btn">
-                                <a class="btn" href="">Join Now</a>
-                                <a class="btn" href="">Contact Us</a>
+                                <a class="btn" href="">Daftar Sekarang</a>
+                                
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 d-none d-md-block">
                         <div class="hero-image">
-                            <img src="img/hero.png" alt="Hero Image">
+                           <img src="<?= base_url('assets/')?>img/cake1.png" alt="cake">
                         </div>
                     </div>
                 </div>
@@ -65,14 +65,14 @@
         <div class="discount wow zoomIn" data-wow-delay="0.1s">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Awesome Discount</p>
-                    <h2>Get <span>30%</span> Discount for all Classes</h2>
+                    <p>ebunga kontes</p>
+                    <h2>Ayoooo<span></span> Upload produk cake anda</h2>
                 </div>
                 <div class="container discount-text">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
                     </p>
-                    <a class="btn">Join Now</a>
+                    <a class="btn">Daftar Sekarang</a>
                 </div>
             </div>
         </div>
@@ -83,15 +83,15 @@
         <div class="price">
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Yoga Package</p>
-                    <h2>Yoga Pricing Plan</h2>
+                    <p>ebunga kontes</p>
+                    <h2>Hadiah Ebunga Kontes</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-4 wow fadeInUp" data-wow-delay="0.0s">
                         <div class="price-item">
                             <div class="price-header">
                                 <div class="price-title">
-                                    <h2>Basic</h2>
+                                    <h2>Juara 2</h2>
                                 </div>
                                 <div class="price-prices">
                                     <h2><small>$</small>49<span>/ mo</span></h2>
@@ -109,7 +109,7 @@
                             </div>
                             <div class="price-footer">
                                 <div class="price-action">
-                                    <a class="btn" href="">Join Now</a>
+                                    <a class="btn" href="">Daftar Sekarang</a>
                                 </div>
                             </div>
                         </div>
@@ -117,11 +117,9 @@
                     <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="price-item featured-item">
                             <div class="price-header">
-                                <div class="price-status">
-                                    <span>Popular</span>
-                                </div>
+                               
                                 <div class="price-title">
-                                    <h2>Standard</h2>
+                                    <h2>Juara 1</h2>
                                 </div>
                                 <div class="price-prices">
                                     <h2><small>$</small>99<span>/ mo</span></h2>
@@ -139,7 +137,7 @@
                             </div>
                             <div class="price-footer">
                                 <div class="price-action">
-                                    <a class="btn" href="">Join Now</a>
+                                    <a class="btn" href="">Daftar Sekarang</a>
                                 </div>
                             </div>
                         </div>
@@ -148,7 +146,7 @@
                         <div class="price-item">
                             <div class="price-header">
                                 <div class="price-title">
-                                    <h2>Premium</h2>
+                                    <h2>Juara 3</h2>
                                 </div>
                                 <div class="price-prices">
                                     <h2><small>$</small>149<span>/ mo</span></h2>
@@ -166,7 +164,7 @@
                             </div>
                             <div class="price-footer">
                                 <div class="price-action">
-                                    <a class="btn" href="">Join Now</a>
+                                    <a class="btn" href="">Daftar Sekarang</a>
                                 </div>
                             </div>
                         </div>
