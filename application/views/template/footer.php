@@ -5,8 +5,8 @@
                         <a href="index.html" class="footer-logo">ebunga</a>
                         <h3>www.ebunga.com</h3>
                         <div class="footer-menu">
-                            <p>+6285261998748</p>
-                            <p>info@example.com</p>
+                            <p>++6282167511111</p>
+                            <p>ebunga@gmail.com</p>
                         </div>
                         <div class="footer-social">
                             

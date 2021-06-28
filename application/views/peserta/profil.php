@@ -42,7 +42,7 @@
                           <?php 
 
                               if ($cake['status'] == 0) {
-                                echo '<div class="alert alert-danger mt-3" role="alert"><b>Produk anda saat ini belum dapat di tampilkan di list kontes desain lomba cake ebunga.</b></div>';
+                                echo '<div class="alert alert-warning mt-3" role="alert"><b>Produk anda saat ini masih dalam proses persetujuan.</b></div>';
                               } else  { 
                             
                                 $toko = $cake['slug_toko'];
@@ -126,7 +126,7 @@
 
                            <?php  } } ?>
 
-                        <h5 class="card-title">PROFILE </h5>
+                        <h5 class="card-title">PROFIL </h5>
                         
                               <table class="table table-striped">
 

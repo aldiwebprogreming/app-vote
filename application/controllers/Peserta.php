@@ -71,7 +71,7 @@
 
 					$this->load->library('upload', $config);
 
-					if ( ! $this->upload->do_upload('gambar_cake')){
+					if (!$this->upload->do_upload('gambar_cake')){
 						$error = array('error' => $this->upload->display_errors());
 						$this->load->view('v_upload', $error);
 					}elseif (! $this->upload->do_upload('gambar_cake2')) {
@@ -83,10 +83,29 @@
 						$this->load->view('v_upload', $error);
 					}
 					else{
-						
+
 						$neme_produk = $_FILES['gambar_cake']['name'];
 						$neme_produk2 = $_FILES['gambar_cake2']['name'];
 						$neme_produk3 = $_FILES['gambar_cake3']['name'];
+
+		                //Compress Image
+		                $gbr = $this->upload->data();
+		                $config['image_library']='gd2';
+		                $config['source_image']='./produk/'.$_FILES['gambar_cake']['name'];
+		                $config['create_thumb']= FALSE;
+		                $config['maintain_ratio']= FALSE;
+		                $config['quality']= '50%';
+		                $config['width']= 500;
+		                $config['height']= 500;
+		                $config['new_image']= './produk/'.$_FILES['gambar_cake']['name'];
+		                $this->load->library('image_lib', $config);
+		                $this->image_lib->resize();
+
+		             
+
+		              
+						
+						
 
 
 						$kode_peserta = $this->session->kode_peserta;
@@ -131,6 +150,14 @@
 			
 
 		}
+
+
+		function kompres_gambar(){
+
+		}
+
+
+
 
 
 		function profil(){

@@ -150,7 +150,7 @@
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
                          <div class="input-group">
-                              <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" style="width: 100px;" placeholder="Cari cake......." name="cari" id="cari">
+                              <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" style="width: 100px;" placeholder="Cari cake berdasarkan nama toko" name="cari" id="cari">
                               <div class="input-group-append">
                                 <span class="input-group-text"><button class="btn btn-dark btn-sm" id="klik"><li class="fas fa-search"></li></button></span>
                               
@@ -171,8 +171,10 @@
 
                     <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
 
-                        <div class=" card" style="width: 20rem;border-radius:20px; border-width: 6px; border-color: pink; ">
-                          <img class="zoom card-img-top" src="<?= base_url("produk/") ?><?= $data['gambar_produk'] ?>" alt="Card image cap">
+                        <div class="portfolio-wrap card" style="width: 20rem;border-radius:20px; border-width: 6px; border-color: pink; ">
+                            <a href="<?= base_url("produk/") ?><?= $data['gambar_produk'] ?>" data-lightbox="portfolio">
+                                <img class="card-img-top" src="<?= base_url("produk/") ?><?= $data['gambar_produk'] ?>" alt="Card image cap">
+                            </a>
                           <div class="card-body">
 
                             <h5 class="card-title text-center"><?= $data['judul_produk'] ?></h5>
@@ -312,6 +314,8 @@
         </div>
 
           </div>
+
+        
 
 
         <!-- Class End -->

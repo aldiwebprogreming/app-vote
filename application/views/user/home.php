@@ -1,107 +1,68 @@
+<body style="background-color: white;">
 
-
-        <!-- Nav Bar End -->
-
-<div class="page-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Dashboard participant</h2>
+ <div class="hero">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="hero-text">
+                            <h1>Yoga Practice For Good Health</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
+                            </p>
+                            <div class="hero-btn">
+                                <a class="btn" href="">Join Now</a>
+                                <a class="btn" href="">Contact Us</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12 mt-3">
-                        <a href="<?= base_url('dashboard/') ?>">Home</a>
-                        <a href="<?= base_url('upload/') ?>">upload</a>
+                    <div class="col-sm-12 col-md-6 d-none d-md-block">
+                        <div class="hero-image">
+                            <img src="img/hero.png" alt="Hero Image">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Page Header End -->
 
-
-        <!-- About Start -->
-        <div class="about wow fadeInUp" data-wow-delay="0.1s">
+<div class="about wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
-                <div class="row">
-                  <div class="col-sm-4 mt-3">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5>VOTE</h5>
-                        <p class="card-text" style="font-size: 50px; color: red;"><i class="fas fa-heart"></i> <?= $vote ?></p><p>
-                        <a href="<?= base_url('listvote/') ?>" class="btn btn-dark">Daftar Vote</a>
-                      </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="about-img">
+                            <img src="https://www.freepnglogos.com/uploads/cake-png/cake-png-transparent-cake-images-pluspng-21.png" alt="Image">
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-sm-4 mt-3">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title">UPLOAD CAKE </h5>
-
-                        <?php if ($cake == 0) { ?>
-
-                             <p class="card-text" style="font-size: 30px; color: red;"><i class="fas fa-birthday-cake">Tidak tersedia</i> </p>
-
-                        <?php } else { ?>
-                        <p class="card-text" style="font-size: 30px; color: red;"><i class="fas fa-birthday-cake"> Tersedia </i> </p>
-                    <?php } ?>
-                        <a href="<?= base_url('upload/') ?>" class="btn btn-dark">Upload Ceke</a>
-                      </div>
+                    <div class="col-lg-7 col-md-6">
+                        <div class="section-header text-left">
+                            <p>Learn About Us</p>
+                            <h2>Selamat datang di kontes cake ebunga</h2>
+                        </div>
+                        <div class="about-text">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
+                            </p>
+                            <a class="btn" href="">Baca Selengkapnya</a>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-sm-4 mt-3">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title" > PROFIL CAKE </h5>
-                        <p class="card-text" style="font-size: 50px; color: red;"><i class="fas fa-user-tag"></i> </p>
-                        <a href="<?= base_url('profil/') ?>" class="btn btn-dark">Profil</a>
-                      </div>
-                    </div>
-                  </div>
                 </div>
             </div>
         </div>
-        <!-- Hero Start -->
-       
-        <!-- Hero End -->
+        <!-- About End -->
 
 
-   
+        
+
 
         <!-- Class Start -->
-       
-
-                
-             
-                <div class="row class-container">
-                       
-                    <div class="col-lg-3 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-
-                       <!--  cart 1 -->
-
-                    </div>
-
-
-
-
-                              
-
-
-                    
-                    
-               
-
-
-
-                    
-                    
-                    
-                </div>
-            </div>
-        </div>
+      
         <!-- Class End -->
         
         
         <!-- Discount Start -->
-        <!-- <div class="discount wow zoomIn" data-wow-delay="0.1s">
+        <div class="discount wow zoomIn" data-wow-delay="0.1s">
             <div class="container">
                 <div class="section-header text-center">
                     <p>Awesome Discount</p>
@@ -114,12 +75,12 @@
                     <a class="btn">Join Now</a>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- Discount End -->
         
         
         <!-- Price Start -->
-        <!-- <div class="price">
+        <div class="price">
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                     <p>Yoga Package</p>
@@ -212,83 +173,19 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- Price End -->
         
         
-        <!-- Testimonial Start -->
-       <!--  <div class="testimonial wow fadeInUp" data-wow-delay="0.1s"> -->
-         <!--    <div class="container">
-                <div class="section-header text-center">
-                    <p>Testimonial</p>
-                    <h2>Our Client Say!</h2>
-                </div>
-                <div class="owl-carousel testimonials-carousel">
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-1.jpg" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.
-                            </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-2.jpg" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.
-                            </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-3.jpg" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.
-                            </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-4.jpg" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum.
-                            </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Testimonial End -->
-
+  
 
         <!-- Team Start -->
-        <div class="team">
-            <div class="container">
-                
-            </div>
-        </div>
+       
         <!-- Team End -->
 
 
         <!-- Blog Start -->
-       <!--  <div class="blog">
+        <div class="blog">
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                     <p>From Blog</p>
@@ -399,10 +296,4 @@
                     </div>
                 </div>
             </div>
-        </div> -->
-        <!-- Blog End -->
-
-
-        <!-- Footer Start -->
-         <script src="<?= base_url('assets/') ?>alert.js"></script>
-        <?php echo "<script>".$this->session->flashdata('message')."</script>"?>
+        </div>

@@ -98,8 +98,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
                             </div>
                             <div class="text">
                                 <i class="fa fa-phone-alt"></i>
-                                <h2>+6285261998748</h2>
-                                <p>For Appointment</p>
+                                <h2>+6282167511111</h2>
+                                
                             </div>
                         </div>
                     </div>

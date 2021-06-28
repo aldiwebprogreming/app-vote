@@ -15,6 +15,15 @@
 		}
 
 
+		function home(){
+
+			$this->load->view('template/header');
+
+			$this->load->view('user/home');
+			$this->load->view('template/footer');
+		}
+
+
 		function index(){
 
 
