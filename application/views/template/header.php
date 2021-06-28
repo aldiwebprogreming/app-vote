@@ -62,6 +62,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>loading/style.css?v2">
 
 
+
+
         <!-- link slide img -->
         <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
         <link href="<?= base_url('assets/slide_img/') ?>light-carousel.css" rel="stylesheet" type="text/css">
@@ -96,7 +98,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
                             </div>
                             <div class="text">
                                 <i class="fa fa-phone-alt"></i>
-                                <h2>+123 456 7890</h2>
+                                <h2>+6285261998748</h2>
                                 <p>For Appointment</p>
                             </div>
                         </div>

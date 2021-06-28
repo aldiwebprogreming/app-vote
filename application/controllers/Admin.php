@@ -10,14 +10,18 @@ class Admin extends CI_Controller
 	function __construct()
 	{
 	 	parent::__construct();
+	 	if ($this->session->userdata('username') == NULL) {
+				redirect('admin/login');
+			}
 
 	}
 
 	function index(){
 
 		$data['jml_peserta'] = $this->db->get('tbl_registrasi_peserta')->num_rows();
-		$data['jml_vote'] = $this->db->get('tbl_vote')->num_rows();
-
+		$data['jml_visitor'] = $this->db->get('tbl_visitor')->num_rows();
+		$data['jml_produk'] = $this->db->get_where('tbl_produk', array('status' => 1))->num_rows();
+		$data['jml_vote'] = $this->db->query("SELECT * FROM tbl_vote2 ORDER BY jml DESC limit 1")->row_array();
 
 		$this->load->view('template_admin/header');
 		$this->load->view('admin/dashboard', $data);
@@ -78,7 +82,7 @@ class Admin extends CI_Controller
 
 		$this->db->where('id', $id);
 		$this->db->update('tbl_registrasi_peserta', $data);
-		$this->session->set_flashdata('message', 'swal("Sukses!", "Data Berhasil diubah", "success");');
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Status Berhasil diubah", "success");');
 			redirect('admin/data-peserta');
 	}
 
@@ -98,7 +102,7 @@ class Admin extends CI_Controller
 
 		$this->db->where('id', $id);
 		$this->db->update('tbl_registrasi_peserta', $data);
-		$this->session->set_flashdata('message', 'swal("Sukses!", "Data Berhasil diubah", "success");');
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Status Berhasil diubah", "success");');
 			redirect('admin/data-peserta');
 	}
 
@@ -220,9 +224,13 @@ class Admin extends CI_Controller
 
 	function aktifProduk(){
 		$id = $this->input->post('id_produk');
-		$email = 'alldii1956@gmail.com';
+		$email = $this->input->post('email');
 		$data = $this->db->get_where('tbl_registrasi_peserta',  array('email' => $email))->row_array();
-		$nama = $data['name'];
+		
+		$store = $this->db->get_where('tbl_produk', array('id' => $id))->row_array();
+		$toko = $store['slug_toko'];
+
+
 		$kode_peserta = $data['kode_peserta'];
 
 
@@ -232,7 +240,7 @@ class Admin extends CI_Controller
 
 		];
 
-		$this->sendEmailSertifikat($email, $nama, $kode_peserta);
+		$this->sendEmailSertifikat($email, $toko);
 
 		
 
@@ -263,7 +271,7 @@ class Admin extends CI_Controller
 	}
 
 
-	function sendEmailSertifikat($email, $nama, $kode_peserta){
+	function sendEmailSertifikat($email,$toko){
 
         $config = [
             'protocol'  => 'smtp',
@@ -285,7 +293,7 @@ class Admin extends CI_Controller
 
 			$this->email->subject('Sertfikat peserta lomba desain cake ebunga');
 			
-			$get1 = file_get_contents(base_url("email/sertifikat.php?email=$email&&nama=$nama&&kode=$kode_peserta"));
+			$get1 = file_get_contents(base_url("email/sertifikat.php?id=$toko"));
 	      			
 
 			$this->email->message($get1);

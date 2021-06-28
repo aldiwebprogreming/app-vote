@@ -160,6 +160,8 @@
                     <div class="col-md-2"></div>
                 </div>
 
+                
+
 
                <div id="search">
 
@@ -169,7 +171,7 @@
 
                     <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
 
-                        <div class="card" style="width: 20rem;border-radius:20px; border-width: 6px; border-color: pink; ">
+                        <div class=" card" style="width: 20rem;border-radius:20px; border-width: 6px; border-color: pink; ">
                           <img class="zoom card-img-top" src="<?= base_url("produk/") ?><?= $data['gambar_produk'] ?>" alt="Card image cap">
                           <div class="card-body">
 
@@ -195,7 +197,7 @@
                              <center>
 
                                 <?php 
-
+                                    date_default_timezone_set('Asia/Jakarta');
                                     $kp = $data['kode_produk'];
                                     $vote2 = $this->db->get_where('tbl_vote', array('kode_produk' => $kp))->num_rows();
 

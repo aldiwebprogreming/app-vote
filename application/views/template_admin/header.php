@@ -133,7 +133,7 @@
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <span class="dropdown-item dropdown-header">Logout</span>
           <div class="dropdown-divider"></div>
-          <a href="<?= base_url() ?>login/logout" class="dropdown-item">
+          <a href="<?= base_url() ?>auth/logout" class="dropdown-item">
             <i class="fas fa-user mr-2"></i> Logout
             <!-- <span class="float-right text-muted text-sm">3 mins</span> -->
           </a>
@@ -226,7 +226,7 @@
             </ul>
           </li> -->
           <li class="nav-item">
-            <a href="<?= base_url() ?>admin/Dashboard/" class="nav-link">
+            <a href="<?= base_url() ?>admin/dashboard/" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 

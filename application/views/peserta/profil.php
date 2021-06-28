@@ -84,13 +84,12 @@
                               
                              }else { ?>
     
-                                Share to :<br>
+                                Link produk anda :<br><br>
 
-   <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60cc55383e9275e2"></script>
-
-<!-- Go to www.addthis.com/dashboard to customize your tools --> 
-                                         <div class="addthis_inline_share_toolbox_bbi3"></div>
+ 
+                               <!--  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60cc55383e9275e2"></script>
+                                
+                                <div class="addthis_inline_share_toolbox_bbi3"></div> -->
 
 
  

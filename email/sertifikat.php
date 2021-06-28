@@ -99,15 +99,14 @@
                                     </tr>
                                     <tr>
                                       <?php 
-                                          $nama = $_GET['nama'];
-                                          $email = $_GET['email'];
-                                          $kode = $_GET['kode'];
+                                          $toko = $_GET['id'];
+                                        
                                        ?>
                                       <td align='center' style='font-size:0px;padding:10px 25px;word-break:break-word;' vertical-align='middle'>
                                         <table border='0' cellpadding='0' cellspacing='0' role='presentation' style='border-collapse:separate;line-height:100%;'>
                                           <tr>
                                             <td align='center' bgcolor='#ff6f6f' role='presentation' style='background-color:#ff6f6f;border:none;border-radius:5px;cursor:auto;padding:10px 25px;' valign='middle'>
-                                              <a href="http://localhost/app-vote/admin/sertifikat?email=<?= $email ?>&&nama=<?= $nama ?>&&kode=<?= $kode ?>" style='background:#ff6f6f;color:#ffffff;font-family:Oxygen, Helvetica neue, sans-serif;font-size:14px;font-weight:400;line-height:21px;margin:0;text-decoration:none;text-transform:none;' target='_blank'>
+                                              <a href="http://localhost/app-vote/ebunga/sertifikat/<?= $toko ?>" style='background:#ff6f6f;color:#ffffff;font-family:Oxygen, Helvetica neue, sans-serif;font-size:14px;font-weight:400;line-height:21px;margin:0;text-decoration:none;text-transform:none;' target='_blank'>
                                                 Download Sertifikat
                                               </a>
                                             </td>

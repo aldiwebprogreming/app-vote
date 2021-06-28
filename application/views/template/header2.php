@@ -1,3 +1,28 @@
+<?php 
+
+    $ip  = $this->input->ip_address(); // Mendapatkan IP user
+
+    $date  = date("Y-m-d"); // Mendapatkan tanggal sekarang
+    $waktu = time(); //\
+    $timeinsert = date("Y-m-d H:i:s");
+
+    // Cek berdasarkan IP, apakah user sudah pernah mengakses hari ini
+$s = $this->db->query("SELECT * FROM tbl_visitor WHERE ip='".$ip."' AND date='".$date."'")->num_rows();
+$ss = isset($s)?($s):0;
+
+//kalau belum ada simpan data ip
+if($ss == 0){
+$this->db->query("INSERT INTO tbl_visitor(ip, date, hits, online, time) VALUES('".$ip."','".$date."','1','".$waktu."','".$timeinsert."')");
+}
+
+// Jika sudah ada, update
+else{
+$this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE ip='".$ip."' AND date='".$date."'");
+}
+        
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,12 +35,14 @@
         <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
 
-
-          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
- 
-        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
-
-
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    
+        <!-- bootstrap css  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+            <!-- skeleton source  -->
+        <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -31,7 +58,20 @@
 
         <!-- Template Stylesheet -->
         <link href="<?= base_url('assets/') ?>css/style.css?v=1.0" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>loading/style.css?v2">
+
+
+
+
+        <!-- link slide img -->
+        <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        <link href="<?= base_url('assets/slide_img/') ?>light-carousel.css" rel="stylesheet" type="text/css">
+
+        
     </head>
+
+    
 
 
     <style>
@@ -58,7 +98,7 @@
                             </div>
                             <div class="text">
                                 <i class="fa fa-phone-alt"></i>
-                                <h2>+123 456 7890</h2>
+                                <h2>+6285261998748</h2>
                                 <p>For Appointment</p>
                             </div>
                         </div>
@@ -66,10 +106,11 @@
                     <div class="col-md-4">
                         <div class="top-bar-right">
                             <div class="social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <!-- <a href=""><i class="fab fa-twitter"></i></a> -->
                                 <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                
                                 <a href=""><i class="fab fa-instagram"></i></a>
+                                <a href=""><i class="fab fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
@@ -81,7 +122,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="" class="navbar-brand">ebunga</a>
+                <a href="" class="navbar-brand"><img src="<?= base_url("assets/logo/ebunga.png") ?>" style="height: 800px;"></a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -102,7 +143,6 @@
                                 <a href="single.html" class="dropdown-item">Blog Detail</a>
                             </div>
                         </div> -->
-
                         <a href="<?= base_url('dashboard/') ?>" class="nav-item nav-link">Dashboard</a>
 
                          <a href="<?= base_url('profil/') ?>" class="nav-item nav-link">Profil</a>

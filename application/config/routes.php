@@ -67,7 +67,8 @@ $route['listvote'] = 'peserta/listVote';
 
 
 // route admin
-$route['admin/Dashboard'] ='admin/index';
+$route['admin/login'] ='auth/index';
+$route['admin/dashboard'] ='admin/index';
 $route['admin/data-peserta'] ='admin/data_peserta';
 $route['admin/data-produk'] ='admin/data_produk';
 $route['admin/data-vote'] ='admin/data_vote';
@@ -77,6 +78,8 @@ $route['admin/data-visitor'] ='admin/data_visitor';
 // route sertifikat
 
 $route['ebunga/sertifikat/(:any)'] = 'ebunga/sertifikat/$1';
+$route['ebunga/email/(:any)'] = 'admin/email/$1';
+
 
 
 

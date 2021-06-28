@@ -98,6 +98,32 @@
 		
 			 );
 
+			$data2 = array(
+			'kode_peserta' => $kode_peserta ,
+			'kode_produk' => $kode_produk,
+			'jml' => 1,
+			'date_vote' => date('Y-m-d'),
+			 );
+
+
+				$cek_vote2 = $this->db->get_where('tbl_vote2', array('kode_produk' =>$kode_produk))->num_rows();
+				if ($cek_vote2 == 0) {
+					$inputvote2 = $this->db->insert('tbl_vote2', $data2);
+				}else {
+
+					$get = $this->db->get_where('tbl_vote2', array('kode_produk' => $kode_produk))->row_array();
+					$jml_vote = $get['jml'];
+
+					$edit2 = [
+
+							'jml' => 1+$jml_vote,
+
+						];
+
+						$this->db->where('kode_produk', $kode_produk);
+						$this->db->update('tbl_vote2', $edit2);
+				}
+
 
 			$input = $this->db->insert('tbl_vote', $data);
 			$this->session->set_flashdata('message', 'swal("Sukses!", "Vote success", "success");');
@@ -144,14 +170,13 @@
 			$notlp = $this->input->post('notlp');
 
 			$ip = $this->input->ip_address();
+			$url = "http://localhost/app-vote/produk/detail/$kode_produk";
 
 			$cek = $this->db->query("SELECT * FROM tbl_vote WHERE email_vote='$email' OR ip_user ='$ip' ")->num_rows();
 
 
 			if ($cek >= 1) {
 				$this->session->set_flashdata('message', 'swal("Maaf!", "Anda sudah vote", "warning");');
-
-				$url = "http://localhost/app-vote/produk/detail/$kode_produk";
 
 			redirect($url);
 				
@@ -168,12 +193,40 @@
 		
 			 );
 
+			$data2 = array(
+			'kode_peserta' => $kode_peserta ,
+			'kode_produk' => $kode_produk,
+			'jml' => 1,
+			'date_vote' => date('Y-m-d'),
+			 );
+
+
+				$cek_vote2 = $this->db->get_where('tbl_vote2', array('kode_produk' =>$kode_produk))->num_rows();
+				if ($cek_vote2 == 0) {
+					$inputvote2 = $this->db->insert('tbl_vote2', $data2);
+				}else {
+
+					$get = $this->db->get_where('tbl_vote2', array('kode_produk' => $kode_produk))->row_array();
+					$jml_vote = $get['jml'];
+
+					$edit2 = [
+
+							'jml' => 1+$jml_vote,
+
+						];
+
+						$this->db->where('kode_produk', $kode_produk);
+						$this->db->update('tbl_vote2', $edit2);
+				}
+
 
 			$input = $this->db->insert('tbl_vote', $data);
 			$this->session->set_flashdata('message', 'swal("Sukses!", "Vote success", "success");');
-			redirect('/');
+			redirect($url);
 
 		}
+
+			
 
 
 		}

@@ -47,7 +47,7 @@ table tr:nth-child(even) {
      ?>
 
 <img src="assets/sertifikat/gambar_sertifikat.png" style='width: 1020px; height: 700px; position: absolute; bottom: 20px; '> 
-<center><p style="position: absolute; top: 266px;  text-align: center; font-size: 30px; font-weight: bold; font-family: 'Jomhuria', cursive;"><?= $pst['name'] ?></p>
+<center><p style="position: absolute; top: 266px;  text-align: center; font-size: 30px; font-weight: bold; font-family: 'Jomhuria', cursive;"><?= strtoupper($pst['name']) ?></p>
 </center>
 
 

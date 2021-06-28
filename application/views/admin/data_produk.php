@@ -36,6 +36,7 @@
                   <th>Kode produk</th>
                   <th>Nama toko</th>
                   <th>Judul produk</th>
+                  <th>Jumlah Vote</th>
                   <th>Gambar</th>
                   <th>Status</th>
                   <th>Opsi</th>
@@ -51,8 +52,18 @@
                     <td><?= $data['kode_produk'] ?></td>
                     <td><?= $data['nama_toko'] ?></td>
                     <td><?= $data['judul_produk'] ?></td>
-                    <td>
-                      
+                    
+                     <td>
+                        <?php 
+
+                            $jml = $this->db->get_where('tbl_vote',  array('kode_produk' => $data['kode_produk']))->num_rows();
+
+                            echo $jml;
+
+                         ?>
+
+                    </td>
+                      <td>
                      <img src="<?= base_url('produk/') ?><?= $data['gambar_produk'] ?>" alt="..." class="img-thumbnail" style="height: 70px;">
                        
                       </td>
@@ -81,14 +92,21 @@
                                           <h4>Apakah anda ingin mengaktifkan cake ini ?</h4>
                                           <form method="post" action="<?= base_url('admin/aktifProduk') ?>">
                                             
-                                            <input type="hidden" name="id_produk" value="<?= $data['id'] ?>"
+                                            <input type="hidden" name="id_produk" value="<?= $data['id'] ?>">
 
-                                            >
+                                            <?php 
+                                                $email = $this->db->get_where('tbl_registrasi_peserta', array('kode_peserta' => $data['kode_peserta']))->row_array();
+                                               ?>
+
+                                            <input type="hidden" name="email" value="<?= $email['email'] ?>">
                                           
                                         </div>
                                         <div class="modal-footer">
+                                          <div id="load2" class="spinner-border float-left" role="status" style="display: none;">
+                                          <span class="sr-only">Loading...</span>
+                                        </div>
                                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                          <button type="submit" class="btn btn-primary">Submit</button>
+                                          <button id="submit" type="submit" class="btn btn-primary">Submit</button>
                                           </form>
                                         </div>
                                       </div>
@@ -273,6 +291,7 @@
                   <th>Kode produk</th>
                   <th>Nama toko</th>
                   <th>Judul produk</th>
+                  <th>Jumlah Vote</th>
                   <th>Gambar</th>
                   <th>Status</th>
                   <th>Opsi</th>
@@ -306,13 +325,9 @@
 <script>
     
     $(document).ready(function(){
-      $("#submitaktif").click(function(){
-     
-        $("#load1").show();
-       
-      })
+    
 
-       $("#submit2").click(function(){
+       $("#submit").click(function(){
      
         $("#load2").show();
        

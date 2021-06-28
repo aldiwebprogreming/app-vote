@@ -33,14 +33,14 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3 id="nof"></h3>
+                <h3 id="nof"><?= $jml_peserta ?></h3>
 
                 <p>Jumlah Peserta</p>
               </div>
               <div class="icon">
                 <i class="ion ion-user"></i>
               </div>
-              <a href="<?= base_url('nama') ?>" class="small-box-footer"> More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?= base_url('admin/data-peserta') ?>" class="small-box-footer"> More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -49,14 +49,14 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3><!-- <?= $kwitansiHariIni ?> --></h3>
+                <h3><?= $jml_visitor ?><!-- <?= $kwitansiHariIni ?> --></h3>
 
                 <p>Jumlah Pengunjung</p>
               </div>
               <div class="icon">
               
               </div>
-              <a href="<?= base_url() ?>admin/visitor" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?= base_url() ?>admin/data-visitor" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -64,14 +64,37 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3><!-- <?= $kwitansiAnda ?> --></h3>
+                <h3><?= $jml_produk ?><!-- <?= $kwitansiAnda ?> --></h3>
 
                 <p>Jumlah Produk</p>
               </div>
               <div class="icon">
                
               </div>
-             <!--  <a href="<?= base_url() ?>kwitansi/data_kwitansi" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
+              <a href="<?= base_url('admin/data-produk') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <!-- <?= $kwitansiAnda ?> --></h3>
+                <?php 
+
+                  $vote = $this->db->get_where('tbl_registrasi_peserta',  array('kode_peserta' => $jml_vote['kode_peserta']))->row_array();
+
+
+                 ?>
+                 <h4>Vote tertinggi</h4>
+
+                <p><?= $vote['name_store'] ?> </p>
+                <h5>Vote : <?= $jml_vote['jml'] ?></h5>
+              </div>
+              <div class="icon">
+               
+              </div>
+              <!-- <a href="<?= base_url('admin/data-produk') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
           </div>
 

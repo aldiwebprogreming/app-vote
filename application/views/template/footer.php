@@ -5,7 +5,7 @@
                         <a href="index.html" class="footer-logo">ebunga</a>
                         <h3>www.ebunga.com</h3>
                         <div class="footer-menu">
-                            <p>+62821 67 </p>
+                            <p>+6285261998748</p>
                             <p>info@example.com</p>
                         </div>
                         <div class="footer-social">
@@ -78,5 +78,7 @@ $('.sample1').lightCarousel();
   })();
 
 </script>
+
+
     </body>
 </html>
