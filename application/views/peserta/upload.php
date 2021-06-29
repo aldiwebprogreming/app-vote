@@ -16,7 +16,18 @@
             </div>
         </div>
         <!-- Page Header End -->
-
+          <div class="container">
+             <div class="card">
+              <h5 class="card-header">Ketentuan Upload Produk</h5>
+              <div class="card-body">
+                  <small>- Gambar harus berformat PNG, JPG/JPEG.</small><br>
+                  <small>- Ukuran gambar maksimal 20 KB.</small><br>
+                  <small>- Gambar yang diupload harus sesuai dengan tema kontes.</small><br>
+                  <small>- Gambar yang diupload tidak mengandung porno maupun rasis.</small>
+                  <p></p>
+              </div>
+            </div>
+          </div>
 
         <!-- About Start -->
         <div id="app">
@@ -35,6 +46,9 @@
                       </div>
                     </div>
                   </div>
+
+                 
+
                   <div class="col-sm-8 mt-3">
                     <div class="card">
                       <div class="card-body">

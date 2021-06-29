@@ -73,14 +73,17 @@
 
 					if (!$this->upload->do_upload('gambar_cake')){
 						$error = array('error' => $this->upload->display_errors());
-						$this->load->view('v_upload', $error);
+						$this->session->set_flashdata('message', 'swal("Gambar yang anda masukan terlalu besar", "", "warning" );');
+				 		redirect('upload/');
 					}elseif (! $this->upload->do_upload('gambar_cake2')) {
 						$error = array('error' => $this->upload->display_errors());
-						$this->load->view('v_upload', $error);
+						$this->session->set_flashdata('message', 'swal("Gambar yang anda masukan terlalu besar", "", "warning" );');
+				 		redirect('upload/');
 						
 					}elseif (! $this->upload->do_upload('gambar_cake3')) {
 						$error = array('error' => $this->upload->display_errors());
-						$this->load->view('v_upload', $error);
+						$this->session->set_flashdata('message', 'swal("Gambar yang anda masukan terlalu besar", "", "warning" );');
+				 		redirect('upload/');
 					}
 					else{
 
@@ -132,14 +135,14 @@
 						$cek = $this->db->get_where('tbl_produk', array('kode_peserta' => $kode_peserta ))->num_rows();
 						if ($cek >= 1) {
 
-						$this->session->set_flashdata('message', 'swal("your product already exists!", "", "warning" );');
+						$this->session->set_flashdata('message', 'swal("Upload gagal!", "Produk anda sudah ada", "warning" );');
 				 		redirect('upload/');
 		
 							} else{
 
 
 						$inptu = $this->db->insert('tbl_produk', $data);
-						$this->session->set_flashdata('message', 'swal("Success!", "product has been input successfully", "success");');
+						$this->session->set_flashdata('message', 'swal("Success!", "Produk anda berhasil diupload", "success");');
                     redirect('upload/');
 
 					}
@@ -152,9 +155,7 @@
 		}
 
 
-		function kompres_gambar(){
-
-		}
+	
 
 
 

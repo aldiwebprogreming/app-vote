@@ -40,8 +40,10 @@
 								    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pass">
 								      <?= form_error('pass', '<small class="text-danger pl-3">', '</small>'); ?>
 								  </div>
+
+                                 <p><a href="<?= base_url('registrasi/') ?>" class="float-right">Daftar akun ?</a></p>
 								  
-								  <button type="submit" class="btn btn-dark">login</button>
+								  <button type="submit" class="btn btn-dark">Login</button>
 								</form>
 						  </div>
 						</div>

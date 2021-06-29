@@ -57,7 +57,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
         <link href="<?= base_url('assets/') ?>lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="<?= base_url('assets/') ?>css/style.css?v=1.0" rel="stylesheet">
+        <link href="<?= base_url('assets/') ?>css/style.css?v2" rel="stylesheet">
 
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>loading/style.css?v2">
 
@@ -143,8 +143,11 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
                                 <a href="single.html" class="dropdown-item">Blog Detail</a>
                             </div>
                         </div> -->
-                        <a href="<?= base_url('registrasi/') ?>" class="nav-item nav-link">Register</a>
-                        <a href="<?= base_url('login/') ?>" class="nav-item nav-link">Login</a>
+                        <a href="<?= base_url('ebunga/home') ?>" class="nav-item nav-link">Home</a>
+                        <a href="<?= base_url('ebunga/') ?>" class="nav-item nav-link">Vote Cake</a>
+
+                        <a href="<?= base_url('registrasi/') ?>" class="nav-item nav-link">Daftar Peserta</a>
+                        <a href="<?= base_url('login/') ?>" class="nav-item nav-link">Login Peserta</a>
 
                     </div>
                 </div>

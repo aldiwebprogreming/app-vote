@@ -45,9 +45,6 @@
             
                 <div class="row class-container">
 
-
-
-                       
                     <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
 
 
@@ -87,7 +84,7 @@
                                 <button type="button" class="btn btn-outline-danger btn-sm btn-lg btn-block" data-toggle="modal" data-target="#exampleModalCenter<?= $data['id']  ?>">Vote</button>
 
 
-                            <a href="<?= base_url("/") ?>" class="btn btn-outline-primary btn-sm btn-lg btn-block">Kembali</a>
+                            <a href="<?= base_url("ebunga/") ?>" class="btn btn-outline-primary btn-sm btn-lg btn-block">Kembali</a>
                                 
                             </div>
                           </div>
@@ -139,7 +136,7 @@
 
 
 
-                    <div class="col-lg-6 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="col-lg-8 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp detail" data-wow-delay="0.0s">
 
                         <div class="card" style="border-width: 5px; border-color: pink;">
                           <div class="card-body">
@@ -515,4 +512,13 @@
 
 
         <!-- Footer Start -->
-        
+<style>
+    @media (max-width: 577px) {
+        .detail{
+            margin-top: 280px;
+        }
+        .like{
+            font-size: 8px;
+        }
+    }
+</style>

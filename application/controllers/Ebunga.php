@@ -92,7 +92,7 @@
 			if ($cek >= 1) {
 				$this->session->set_flashdata('message', 'swal("Maaf!", "Anda sudah vote", "warning");');
 
-			redirect('/');
+			redirect('ebunga/');
 				
 			} else {
 
@@ -136,7 +136,7 @@
 
 			$input = $this->db->insert('tbl_vote', $data);
 			$this->session->set_flashdata('message', 'swal("Sukses!", "Vote success", "success");');
-			redirect('/');
+			redirect('ebunga/');
 
 		}
 
@@ -373,17 +373,17 @@
                     
                 } else {
                    
-                    $this->session->set_flashdata('message', 'swal("Wrong password", "please login with correct password", "warning");');
+                    $this->session->set_flashdata('message', 'swal("Password salah", "Mohon cek password anda", "warning");');
                     redirect('login/');
                 }
             } else {
                
-                    $this->session->set_flashdata('message', 'swal("This email has not been activated!", "please activate your account", "warning");');
+                    $this->session->set_flashdata('message', 'swal("Anda belum verifikasi email!", "Mohon verifikasi akun anda", "warning");');
                     redirect('login/');
             }
         } else {
         
-             $this->session->set_flashdata('message', 'swal("Email is not registered!", "please register", "error");');
+             $this->session->set_flashdata('message', 'swal("Akun anda tidak terdaftar", "Mohon untuk mendaftar", "error");');
                     redirect('login/');
         }
 

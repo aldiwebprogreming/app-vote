@@ -60,7 +60,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-8 mt-3">
+                  <div class="col-sm-8 mt-3"> 
                     <div class="card">
                       <div class="card-body">
                           <div id="share-sossial-buttons">
@@ -128,7 +128,7 @@
 
                         <h5 class="card-title">PROFIL </h5>
                         
-                              <table class="table table-striped">
+                              <table class="table">
 
 
                                 <thead>
@@ -138,46 +138,46 @@
                                 <tbody>
                                   <tr>
                                     <th scope="row">Name</th>
-                                    <td>:</td>
-                                    <td><?= $data['name'] ?></td>
+                                    
+                                    <td><small><?= $data['name'] ?></small></td>
                                    </tr>
 
                                    <tr>
                                     <th scope="row">Email</th>
-                                    <td>:</td>
-                                    <td><?= $data['email'] ?></td>
+                                    
+                                    <td><small><?= $data['email'] ?></small></td>
                                    </tr>
 
                                   <tr>
                                     <th scope="row">No.telp</th>
-                                    <td>:</td>
                                     
-                                    <td><?= $data['no_telp'] ?></td>
+                                    
+                                    <td><small><?= $data['no_telp'] ?></small></td>
                               
                                    </tr>
 
                                    <tr>
                                     <th scope="row">Provinsi</th>
-                                    <td>:</td>
-                                    <td><?= $prov['name'] ?></td>
+                                    
+                                    <td><small><?= $prov['name'] ?></small></td>
                                    </tr>
 
                                     <tr>
                                     <th scope="row">Kabupaten</th>
-                                    <td>:</td>
-                                    <td><?= $kab['name'] ?></td>
+                                    
+                                    <td><small><?= $kab['name'] ?></small></td>
                                    </tr>
 
                                     <tr>
-                                    <th scope="row">Kecamatan</th>
-                                    <td>:</td>
-                                    <td><?= $kec['name'] ?></td>
+                                    <th scope="row">Kecamatan</small></th>
+                                    
+                                    <td><small><?= $kec['name'] ?></small></td>
                                    </tr>
 
                                     <tr>
-                                    <th scope="row">Kelurahan</th>
-                                    <td>:</td>
-                                    <td><?= $kel['name'] ?></td>
+                                    <th scope="row">Kelurahan</small></th>
+                                    
+                                    <td><small><?= $kel['name'] ?></small></td>
                                    </tr>
                                 </tbody>
                               </table>   

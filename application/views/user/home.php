@@ -5,12 +5,13 @@
                 <div class="row align-items-center">
                     <div class="col-sm-12 col-md-6">
                         <div class="hero-text">
-                            <h1>Kontes desain cake ebunga</h1>
+                            <h1>Lomba desain cake ebunga</h1>
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
                             </p>
                             <div class="hero-btn">
-                                <a class="btn" href="">Daftar Sekarang</a>
+                                <a class="btn" href="<?= base_url('registrasi/') ?>">Daftar Sekarang</a>
+                                  <a class="btn" id="btnklik" href="#vote">Vote cake</a>
                                 
                             </div>
                         </div>
@@ -34,7 +35,6 @@
                     </div>
                     <div class="col-lg-7 col-md-6">
                         <div class="section-header text-left">
-                            <p>Learn About Us</p>
                             <h2>Selamat datang di kontes cake ebunga</h2>
                         </div>
                         <div class="about-text">
@@ -72,7 +72,7 @@
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
                     </p>
-                    <a class="btn">Daftar Sekarang</a>
+                    <a href="<?= base_url('registrasi/') ?>" class="btn">Daftar Sekarang</a>
                 </div>
             </div>
         </div>
@@ -94,22 +94,22 @@
                                     <h2>Juara 2</h2>
                                 </div>
                                 <div class="price-prices">
-                                    <h2><small>$</small>49<span>/ mo</span></h2>
+                                    <h2><small>$</small>70<span>
                                 </div>
                             </div>
                             <div class="price-body">
                                 <div class="price-description">
                                     <ul>
-                                        <li>Personal Trainer</li>
-                                        <li>Special Class</li>
-                                        <li>Free Tutorials</li>
-                                        <li>Group Training</li>
+                                        <li>Uang Tunai</li>
+                                        <li>Diskon Belanja Diebunga</li>
+                                        <li>Sertifikat</li>
+                                        <li>Group Seller</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="price-footer">
                                 <div class="price-action">
-                                    <a class="btn" href="">Daftar Sekarang</a>
+                                    <a href="<?= base_url('registrasi/') ?>" class="btn" href="">Daftar Sekarang</a>
                                 </div>
                             </div>
                         </div>
@@ -122,22 +122,22 @@
                                     <h2>Juara 1</h2>
                                 </div>
                                 <div class="price-prices">
-                                    <h2><small>$</small>99<span>/ mo</span></h2>
+                                    <h2><small>$</small>100<span>
                                 </div>
                             </div>
                             <div class="price-body">
                                 <div class="price-description">
                                     <ul>
-                                        <li>Personal Trainer</li>
-                                        <li>Special Class</li>
-                                        <li>Free Tutorials</li>
-                                        <li>Group Training</li>
+                                        <li>Uang Tunai</li>
+                                        <li>Diskon Belanja Diebunga</li>
+                                        <li>Sertifikat</li>
+                                        <li>Group Seller</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="price-footer">
                                 <div class="price-action">
-                                    <a class="btn" href="">Daftar Sekarang</a>
+                                    <a href="<?= base_url('registrasi/') ?>" class="btn" href="">Daftar Sekarang</a>
                                 </div>
                             </div>
                         </div>
@@ -149,22 +149,22 @@
                                     <h2>Juara 3</h2>
                                 </div>
                                 <div class="price-prices">
-                                    <h2><small>$</small>149<span>/ mo</span></h2>
+                                    <h2><small>$</small>50<span>
                                 </div>
                             </div>
                             <div class="price-body">
                                 <div class="price-description">
                                     <ul>
-                                        <li>Personal Trainer</li>
-                                        <li>Special Class</li>
-                                        <li>Free Tutorials</li>
-                                        <li>Group Training</li>
+                                         <li>Uang Tunai</li>
+                                        <li>Diskon Belanja Diebunga</li>
+                                        <li>Sertifikat</li>
+                                        <li>Group Seller</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="price-footer">
                                 <div class="price-action">
-                                    <a class="btn" href="">Daftar Sekarang</a>
+                                    <a href="<?= base_url('registrasi/') ?>" class="btn" href="">Daftar Sekarang</a>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +183,7 @@
 
 
         <!-- Blog Start -->
-        <div class="blog">
+       <!--  <div class="blog">
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                     <p>From Blog</p>
@@ -275,6 +275,8 @@
                             <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
+
+
                     <div class="blog-item">
                         <div class="blog-img">
                             <img src="img/blog-6.jpg" alt="Blog">
@@ -295,3 +297,4 @@
                 </div>
             </div>
         </div>
+ -->

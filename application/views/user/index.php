@@ -3,149 +3,30 @@
 
 
         <!-- Hero Start -->
-        <div class="hero">
+          <!-- Hero Start -->
+        <div class="hero" style="height: 300px;">
             <div class="container-fluid">
                 <div class="row align-items-center">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="hero-text">
-                            <h1>Lomba desain cake ebunga</h1>
+                    <div class="col-sm-12 col-md-12">
+                        <div class="text-center mt-4">
+                            <h1 style="text-align: center;">Competition Product</h1>
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
                             </p>
-                            <div class="hero-btn">
-                                <a class="btn" href="<?= base_url('registrasi') ?>">Gabung sekarang</a>
-                                <a class="btn" id="btnklik" href="#vote">Vote cake</a>
-                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 d-none d-md-block">
-                        <div class="hero-image">
-                            <img src="<?= base_url('assets/')?>img/cake1.png" alt="cake">
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
         <!-- Hero End -->
 
 
-        <!-- About Start -->
-        <!-- <div class="about wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="about-img">
-                            <img src="<?= base_url('assets/') ?>img/about.png" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-6">
-                        <div class="section-header text-left">
-                            <p>Learn About Us</p>
-                            <h2>Welcome to Yooga</h2>
-                        </div>
-                        <div class="about-text">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
-                            </p>
-                            <a class="btn" href="">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- About End -->
-
-
-        <!-- Service Start -->
-        <!-- <div class="service">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>What we do</p>
-                    <h2>Yoga For Health</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-workout"></i>
-                            </div>
-                            <h3>Heal emotions</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item active">
-                            <div class="service-icon">
-                                <i class="flaticon-workout-1"></i>
-                            </div>
-                            <h3>Body Refreshes</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-workout-2"></i>
-                            </div>
-                            <h3>Mind & Serenity</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-workout-3"></i>
-                            </div>
-                            <h3>Enjoy Your life</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-workout-4"></i>
-                            </div>
-                            <h3>Body & Spirituality</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="flaticon-yoga-pose"></i>
-                            </div>
-                            <h3>Body & Mind</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Service End -->
-
-
         <!-- Class Start -->
-        <div class="class" id="vote">
+        <div class="class" id="vote" style="margin-top: 20px;">
             <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                 <!--    <p>Our Classes</p> -->
-                    <h2>Competition Product</h2>
-                </div>
+                
                 <div class="row mb-5">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
@@ -169,9 +50,9 @@
                 <div class="row class-container" >
                        <?php foreach ($produk as $data) { ?>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-6 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
 
-                        <div class="portfolio-wrap card" style="width: 20rem;border-radius:20px; border-width: 6px; border-color: pink; ">
+                        <div class="portfolio-wrap card" style="border-radius:20px; border-width: 6px; border-color: pink; ">
                             <a href="<?= base_url("produk/") ?><?= $data['gambar_produk'] ?>" data-lightbox="portfolio">
                                 <img class="card-img-top" src="<?= base_url("produk/") ?><?= $data['gambar_produk'] ?>" alt="Card image cap">
                             </a>
@@ -195,7 +76,7 @@
 
                               ?>
 
-                             <p style="text-align: center;"><i class="fas fa-map-marker-alt"></i> <?php   echo $kabupaten['name']; ?></p>
+                             <p class="kab" style="text-align: center;"><i class="fas fa-map-marker-alt"></i> <?php   echo $kabupaten['name']; ?></p>
                              <center>
 
                                 <?php 
@@ -240,12 +121,12 @@
 
                                  ?>
 
-                                <p><i class="fas fa-heart"> <?= $vote2 ?></i></p>
+                                <p><i class="fas fa-heart" style="color: red;"> <?= $vote2 ?></i></p>
 
                                 <?php if ($vote2 == 0) { ?>
 
                                 <?php } else{ ?>
-                                <p><i class="fas fa-like"></i> <b>Disukuai</b> <?= $waktu ?></p>
+                                <p class="like"><i class="fas fa-thumbs-up" style="color: blue;"></i> <b>Disukuai</b> <?= $waktu ?></p>
                                <?php } ?>
                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter<?= $data['id']  ?>"><i class="fas fa-heart"></i></button>
                                  <a class="btn btn-primary" href="<?= base_url("produk/detail/") ?><?= $data['kode_produk'] ?>"><i class="fas fa-eye"></i></a>
@@ -580,6 +461,17 @@ $(document).ready(function()    {
         
     })
 </script>
+
+<style>
+    @media (max-width: 577px) {
+        .kab{
+            font-size: 8px;
+        }
+        .like{
+            font-size: 8px;
+        }
+    }
+</style>
     </body>
 </html>
 
