@@ -515,7 +515,7 @@
 <style>
     @media (max-width: 577px) {
         .detail{
-            margin-top: 280px;
+            margin-top: 270px;
         }
         .like{
             font-size: 8px;
