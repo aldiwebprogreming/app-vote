@@ -42,7 +42,7 @@
                           <?php 
 
                               if ($cake['status'] == 0) {
-                                echo '<div class="alert alert-warning mt-3" role="alert"><b>Produk anda saat ini masih dalam proses persetujuan.</b></div>';
+                                echo '<div class="alert alert-warning mt-3" role="alert"><b>Produk cake anda saat ini masih dalam proses persetujuan.</b></div>';
                               } else  { 
                             
                                 $toko = $cake['slug_toko'];
@@ -70,7 +70,7 @@
                               if ($cek == 0) { 
 
                                 echo '<div class="alert alert-warning" role="alert">
-                                Produk anda belum tersdia, <b>segera upload cake anda.</b>
+                         Cake anda belum tersedia, <b>segera upload cake anda.</b>
                               </div>';
 
                                 echo "<hr>";

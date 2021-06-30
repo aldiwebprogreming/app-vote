@@ -61,6 +61,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
 
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>loading/style.css?v2">
 
+        
+
 
 
 
@@ -93,7 +95,7 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
                         <div class="top-bar-left">
                             <div class="text">
                                 <i class="far fa-clock"></i>
-                                <h2>ebunga@gmail.com</h2>
+                                <h2>ebungasuksesmakmur@gmail.com </h2>
                                
                             </div>
                             <div class="text">

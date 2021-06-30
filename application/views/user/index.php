@@ -1,4 +1,5 @@
-
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
         <!-- Nav Bar End -->
 
 
@@ -9,9 +10,9 @@
                 <div class="row align-items-center">
                     <div class="col-sm-12 col-md-12">
                         <div class="text-center mt-4">
-                            <h1 style="text-align: center;">Competition Product</h1>
+                            <h1 style="text-align: center; ">Kontes produk cake</h1>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
+                                Ayoo vote produk caka terbaik anda
                             </p>
                             
                         </div>

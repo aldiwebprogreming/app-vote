@@ -7,11 +7,11 @@
                         <div class="hero-text">
                             <h1>Lomba desain cake ebunga</h1>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
+                                Kontes desain cake pertama di indonesia dan dapatkan hadianya, ayoo buruan daftar cake anda sekarang juga.
                             </p>
                             <div class="hero-btn">
                                 <a class="btn" href="<?= base_url('registrasi/') ?>">Daftar Sekarang</a>
-                                  <a class="btn" id="btnklik" href="#vote">Vote cake</a>
+                                  <a class="btn" id="btnklik" href="<?= base_url('ebunga/') ?>">Vote cake</a>
                                 
                             </div>
                         </div>
@@ -39,10 +39,10 @@
                         </div>
                         <div class="about-text">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                                Desain cake ebunga adalah kontes perlombaan desain cake yang dilakukan secara online dengan menggunakan fitur vote tertinggi untuk mendapatkan cake desain terbaik.
                             </p>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
+                               Kontes desain cake ini berlaku seluruh wilayah indonesia dengan mengacu pada nama toko anda. Ayoooo tunggu apa lagi upload desain cake anda.
                             </p>
                             <a class="btn" href="">Baca Selengkapnya</a>
                         </div>
@@ -69,8 +69,8 @@
                     <h2>Ayoooo<span></span> Upload produk cake anda</h2>
                 </div>
                 <div class="container discount-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
+                    <p style="font-size: 20px;">
+                       Kompetisi desain cake pertama di indonesia dan dapatkan hadianya, ayoo buruan daftar sekarang juga.
                     </p>
                     <a href="<?= base_url('registrasi/') ?>" class="btn">Daftar Sekarang</a>
                 </div>
@@ -83,8 +83,8 @@
         <div class="price">
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>ebunga kontes</p>
-                    <h2>Hadiah Ebunga Kontes</h2>
+                
+                    <h2>Hadiah kontes desain cake</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-4 wow fadeInUp" data-wow-delay="0.0s">
@@ -94,7 +94,7 @@
                                     <h2>Juara 2</h2>
                                 </div>
                                 <div class="price-prices">
-                                    <h2><small>$</small>70<span>
+                                    <li class="fas fa-medal mt-4" style="font-size: 70px;"></li>
                                 </div>
                             </div>
                             <div class="price-body">
@@ -122,7 +122,7 @@
                                     <h2>Juara 1</h2>
                                 </div>
                                 <div class="price-prices">
-                                    <h2><small>$</small>100<span>
+                                      <li class="fas fa-medal mt-4" style="font-size: 70px; color: rgb(218, 165, 32)"></li>
                                 </div>
                             </div>
                             <div class="price-body">
@@ -149,7 +149,7 @@
                                     <h2>Juara 3</h2>
                                 </div>
                                 <div class="price-prices">
-                                    <h2><small>$</small>50<span>
+                                     <li class="fas fa-medal mt-4" style="font-size: 70px; "></li>
                                 </div>
                             </div>
                             <div class="price-body">

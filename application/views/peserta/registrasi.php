@@ -1,4 +1,6 @@
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
 <div class="preloader" style="display: none">
       <div class="loading">
         <img src="<?= base_url() ?>loading/loadbaru.gif" width="400">
@@ -16,7 +18,7 @@
                         <div class="text-center mt-4">
                             <h1 style="text-align: center;">Pendaftaran Peserta</h1>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
+                                Daftarkan data diri anda sebagai peserta dan upload desain cake anda
                             </p>
                             
                         </div>
@@ -43,36 +45,40 @@
 
                     </div>
 
-
+                  
 
 
                     <div class="col-lg-6 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-                          <h3 class="text-center"> <i class="fas fa-user"></i> Daftar Akun </h3>
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 style="font-family: 'Jomhuria', cursive; font-size: 30px;"><i class="fas fa-user"></i> Form Daftar Peserta</h4>
+                      </div>
+                    </div>
                           <br>
                         <div class="card" style="border-width: 5px; border-color: pink; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                           <div class="card-body">
                                 <form method="post" action="<?= base_url("ebunga/registrasi") ?>">
                                   <div class="form-group">
                                     <label for="exampleInputEmail1">Nama Lengkap</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"   name="name" value="<?= set_value('name'); ?>">
+                                    <input placeholder="Masukan nama lengkap anda" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"   name="name" value="<?= set_value('name'); ?>" >
                                      <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                                     
                                   </div>
                                   <div class="form-group">
                                     <label for="exampleInputPassword1">Email</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1"name="email" value="<?= set_value('email'); ?>">
+                                    <input placeholder="Masukan email anda" type="text" class="form-control" id="exampleInputPassword1"name="email" value="<?= set_value('email'); ?>">
                                      <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                                   </div>
                                   
                                     
                                 <div class="">
                                       <label>No.telp</label>
-                                  <div class="input-group">
+                                     <div class="input-group">
 
                                     <div class="input-group-prepend">
                                       <div class="input-group-text">+62</div>
                                     </div>
-                                    <input type="number" class="form-control" id="inlineFormInputGroupUsername"  name="notelp" value="<?= set_value('notelp'); ?>">
+                                    <input placeholder="Masukan nomor telepon anda" type="number" class="form-control" id="inlineFormInputGroupUsername"  name="notelp" value="<?= set_value('notelp'); ?>">
                                   </div>
                                    <?= form_error('notelp', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
@@ -80,7 +86,7 @@
 
                                  <div class="form-group">
                                     <label for="">Nama Toko</label>
-                                    <input type="text" class="form-control" name="name_store" value="<?= set_value('name_store'); ?>">
+                                    <input placeholder="Masukan nama toko anda" type="text" class="form-control" name="name_store" value="<?= set_value('name_store'); ?>">
                                      <?= form_error('name_store', '<small class="text-danger pl-3">', '</small>'); ?>
                                   </div>
                                 
@@ -129,13 +135,13 @@
                                   <div class="form-row">
                                     <div class="form-group col-md-6">
                                       <label for="kecamatan">Password</label>
-                                        <input type="password" name="pass1" class="form-control" value="<?= set_value('pass1'); ?>">
+                                        <input placeholder="Masukan password anda" type="password" name="pass1" class="form-control" value="<?= set_value('pass1'); ?>">
                                          <?= form_error('pass1', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
                                     
                                     <div class="form-group col-md-6">
                                       <label for="kelurahan">Ulangi Password</label>
-                                        <input type="password" name="pass2" class="form-control" >
+                                        <input placeholder="ulangi password" type="password" name="pass2" class="form-control" >
                                     </div>
                                   </div>
 

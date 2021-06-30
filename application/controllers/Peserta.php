@@ -120,12 +120,16 @@
 						$slug = strtolower($nama_toko);
 						$slug_toko = str_replace(" ", "-", $slug);
 
+						$judul_produk = strtolower($this->input->post('judul'));
+						$slug_judul_produk = str_replace(" ", "-", $judul_produk);
+
 						$data = array(
 							'kode_produk' =>$kode_produk,
 							'kode_peserta' => $kode_peserta,
 							'nama_toko' => $nama_toko,
 							'slug_toko' => $slug_toko,
 							'judul_produk' => $this->input->post('judul'),
+							'slug_judul_produk' => $slug_judul_produk,
 							'keterangan' => $this->input->post('keterangan'),
 							'gambar_produk' => $neme_produk,
 							'gambar_produk2' => $neme_produk2,

@@ -1,12 +1,11 @@
 
-
         <!-- Nav Bar End -->
 
 <div class="page-header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Login Peserta</h2>
+                        <h2 style="">Login Peserta</h2>
                     </div>
                     <div class="col-12 mt-3">
                         <a href="<?= base_url('/') ?>">Home</a>
@@ -55,11 +54,9 @@
                         </div>
                         <div class="about-text">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                              Masukan email dan password anda dengan benar dan upload produk cake terbaik anda.
                             </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
-                            </p>
+                        
                          <!--    <a class="btn" href="">Learn More</a> -->
                         </div>
                     </div>

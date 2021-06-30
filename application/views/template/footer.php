@@ -2,7 +2,7 @@
             <div class="container-fluid">
                 <div class="container">
                     <div class="footer-info">
-                        <a href="index.html" class="footer-logo">ebunga</a>
+                        <a href="https://www.ebunga.com/" class="footer-logo"  target="_blank">ebunga</a>
                         <h3>www.ebunga.com</h3>
                         <div class="footer-menu">
                             <p>++6282167511111</p>

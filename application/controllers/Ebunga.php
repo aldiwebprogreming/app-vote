@@ -287,8 +287,8 @@
 			$this->sendEmail($email, $kode);
 
 			$input = $this->db->insert('tbl_registrasi_peserta', $data);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please activate your account</div>');
-				$this->session->set_flashdata('message', 'swal("Congratulation! your account has been created.", "Please activate your account", "success");');
+			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Suksess! anda berhasil mendaftar. cek emial anda untuk verifikasi akun anda</div>');
+				
             redirect('/login');
 
 		}
@@ -429,7 +429,7 @@
 
     function cari($cari){
     	
-    	$data['cari'] = $this->db->query("SELECT * FROM tbl_produk WHERE slug_toko LIKE '$cari%'")->result_array();
+    	$data['cari'] = $this->db->query("SELECT * FROM tbl_produk WHERE slug_toko LIKE '$cari%' OR  slug_judul_produk LIKE '$cari%'")->result_array();
 
     	$this->load->view('user/search', $data);
 
