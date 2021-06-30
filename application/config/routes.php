@@ -73,6 +73,7 @@ $route['admin/data-peserta'] ='admin/data_peserta';
 $route['admin/data-produk'] ='admin/data_produk';
 $route['admin/data-vote'] ='admin/data_vote';
 $route['admin/data-visitor'] ='admin/data_visitor';
+$route['admin/vote_tertinggi/(:any)'] = 'admin/vote_tertinggi/$1';
 
 
 // route sertifikat

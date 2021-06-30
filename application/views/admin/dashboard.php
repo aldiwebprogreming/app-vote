@@ -94,7 +94,8 @@
               <div class="icon">
                
               </div>
-              <!-- <a href="<?= base_url('admin/data-produk') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
+               <a href="<?= base_url('admin/vote_tertinggi/') ?><?= $vote['kode_peserta'] ?>" class="small-box-footer"> More info <i class="fas fa-arrow-circle-right"></i></a>
+            
             </div>
           </div>
 

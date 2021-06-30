@@ -342,6 +342,89 @@ class Admin extends CI_Controller
 	}
 
 
+	function vote_tertinggi($kode){
+
+
+		$data['peserta'] = $this->db->get_where('tbl_registrasi_peserta', array('kode_peserta' => $kode))->row_array();
+
+		$prov =  $data['peserta']['prov'];
+		$kab =  $data['peserta']['kab'];
+		$kec =  $data['peserta']['kec'];
+		$kel =  $data['peserta']['kel'];
+
+		$data['vote'] = $this->db->get_where('tbl_vote2', array('kode_peserta' => $kode))->row_array();
+
+		$data['prov'] = $this->db->get_where('tbl_provisni',  array('id' => $prov))->row_array();
+		$data['kab'] = $this->db->get_where('tbl_kabupaten',  array('id' => $kab))->row_array();
+		$data['kec'] = $this->db->get_where('tbl_kecamatan',  array('id' => $kec))->row_array();
+		$data['kel'] = $this->db->get_where('tbl_kelurahan',  array('id' => $kel))->row_array();
+				
+
+		$this->load->view('template_admin/header');
+		$this->load->view('admin/vote_tertinggi', $data);
+		$this->load->view('template_admin/footer');
+	}
+
+
+	function reword(){
+
+		$kd = $this->input->post('kode_peserta');
+		$email = $this->input->post('email');
+
+
+		$produk = $this->db->get_where('tbl_produk', array('kode_peserta' =>$kd ))->row_array();
+		$pr = $produk['slug_toko'];
+
+		$email = $this->input->post('email');
+		$data = [
+			'reword' => 1,
+		];
+
+		$this->sendEmailReword($email, $pr);
+
+		$this->db->where('kode_peserta', $kd);
+		$this->db->update('tbl_registrasi_peserta', $data);
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Data berhasil dikirim", "success");');
+			redirect("admin/vote_tertinggi/$kd");
+
+
+	}
+
+	function sendEmailReword($email, $pr){
+
+        $config = [
+            'protocol'  => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_user' => 'aldiiit593@gmail.com',
+            'smtp_pass' => 'aldimantap123',
+            'smtp_port' => 465,
+            'mailtype'  => 'html',
+            'charset'   => 'utf-8',
+            'newline'   => "\r\n"
+        ];
+
+			$this->load->library('email', $config);
+			$this->email->initialize($config);
+			$this->email->set_newline("\r\n");
+
+			$this->email->from('aldiiit593@gmail.com', 'ebunga vote');
+			$this->email->to("$email");
+
+			$this->email->subject('ebunga cake');
+			
+			$get1 = file_get_contents(base_url('email/sertifikat_pemenang.php?id=$pr'));
+	      			
+
+			$this->email->message("$get1");
+
+			if (!$this->email->send())
+			show_error($this->email->print_debugger());
+			else
+			echo 'Your e-mail has been sent!';
+	}
+
+
+
 
 
 

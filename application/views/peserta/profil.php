@@ -55,7 +55,20 @@
                               
 
                            
-                    <?php } } ?>
+                    <?php } } ?>  
+
+
+                    <?php 
+
+                      if ($data['reword'] == 1) {
+                   ?>
+                         <center>
+                            <a href="<?= base_url("") ?>ebunga/sertifikat/<?= $toko ?>" target="_blank" class="mt-3 btn btn-warning btn-block"><i class="fas fa-download"></i> Download Sertifikat Pemenang</a>
+                          </center>
+
+                       <?php } ?>
+
+
                         </div>
                       </div>
                     </div>
