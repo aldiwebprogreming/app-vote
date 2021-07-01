@@ -9,9 +9,7 @@
                     <div class="col-sm-12 col-md-12">
                         <div class="text-center mt-4">
                             <h1 style="text-align: center;">Detail Produk</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
-                            </p>
+                            
                             
                         </div>
                     </div>
@@ -177,6 +175,58 @@
                                  <tr>
                                   <th scope="row">Jumlah Vote</th>
                                   <td><?= $vote ?> <i class="fas fa-heart" style="color: red;"></i></td>
+                                </tr>
+
+
+
+
+                                 <?php 
+                                    date_default_timezone_set('Asia/Jakarta');
+                                    $kp = $data['kode_produk'];
+                                    $vote2 = $this->db->get_where('tbl_vote', array('kode_produk' => $kp))->num_rows();
+
+                                    $time = $this->db->query("SELECT * FROM tbl_vote WHERE kode_produk='$kp' ORDER BY id DESC LIMIT 1")->row_array();
+
+
+
+                                        $selisih = time() - strtotime($time['date_vote']) ;
+                                        $detik = $selisih ;
+                                        $menit = round($selisih / 60 );
+                                        $jam = round($selisih / 3600 );
+                                        $hari = round($selisih / 86400 );
+                                        $minggu = round($selisih / 604800 );
+                                        $bulan = round($selisih / 2419200 );
+                                        $tahun = round($selisih / 29030400 );
+                                        if ($detik <= 60) {
+                                            $waktu = $detik.' detik yang lalu';
+                                        } else if ($menit <= 60) {
+                                            $waktu = $menit.' menit yang lalu';
+                                        } else if ($jam <= 24) {
+                                            $waktu = $jam.' jam yang lalu';
+                                        } else if ($hari <= 7) {
+                                            $waktu = $hari.' hari yang lalu';
+                                        } else if ($minggu <= 4) {
+                                            $waktu = $minggu.' minggu yang lalu';
+                                        } else if ($bulan <= 12) {
+                                            $waktu = $bulan.' bulan yang lalu';
+                                        } else {
+                                            $waktu = $tahun.' tahun yang lalu';
+                                        }
+                                         $waktu;
+
+                                 ?>
+
+                                  <tr>
+
+                                  <th scope="row">Disukai</th>
+
+                                  <td>
+                                     <?php if ($vote2 == 0) { ?>
+                                        -
+                                    <?php }else{  ?>
+                                    <?= $waktu ?>
+                                <?php } ?>
+                                </td>
                                 </tr>
                                 
                                 

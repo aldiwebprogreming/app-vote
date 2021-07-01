@@ -151,6 +151,8 @@ $this->db->query("UPDATE tbl_visitor SET hits=hits+1, online='".$waktu."' WHERE 
                         <a href="<?= base_url('registrasi/') ?>" class="nav-item nav-link">Daftar Peserta</a>
                         <a href="<?= base_url('login/') ?>" class="nav-item nav-link">Login Peserta</a>
 
+                        <a href="#panduan" class="nav-item nav-link btn btn-primary">Panduan</a>
+
                     </div>
                 </div>
             </div>

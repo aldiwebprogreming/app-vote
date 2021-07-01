@@ -5,9 +5,11 @@
                 <div class="row align-items-center">
                     <div class="col-sm-12 col-md-6">
                         <div class="hero-text">
-                            <h1>Lomba desain cake ebunga</h1>
+                            <h1>EBUNGA COMPETITION</h1>
                             <p>
-                                Kontes desain cake pertama di indonesia dan dapatkan hadianya, ayoo buruan daftar cake anda sekarang juga.
+                                Lomba Menghias Kue Online Pertama di Indonesia.
+                                Kamu mau Cake hasil karyamu dilihat semua orang di masa pandemi ini?<br>
+                                Yuk disini tempatnya dan menangkan hadiahmu
                             </p>
                             <div class="hero-btn">
                                 <a class="btn" href="<?= base_url('registrasi/') ?>">Daftar Sekarang</a>
@@ -35,16 +37,16 @@
                     </div>
                     <div class="col-lg-7 col-md-6">
                         <div class="section-header text-left">
-                            <h2>Selamat datang di kontes cake ebunga</h2>
+                            <h2>Welcome to Ebunga Competition, </h2>
                         </div>
                         <div class="about-text">
                             <p>
-                                Desain cake ebunga adalah kontes perlombaan desain cake yang dilakukan secara online dengan menggunakan fitur vote tertinggi untuk mendapatkan cake desain terbaik.
+                               Ebunga membuka kesempatan bagi kamu yang ingin memperlihatkan kue hasil karyamu untuk berkesempatan memenangkan hadiah menarik dari ebunga.
                             </p>
                             <p>
-                               Kontes desain cake ini berlaku seluruh wilayah indonesia dengan mengacu pada nama toko anda. Ayoooo tunggu apa lagi upload desain cake anda.
+                             Setiap peserta harus menampilkan kue hasil karyanya sendiri dengan desain semenarik mungkin. Dan pemenang akan diumumkan berdasarkan jumlah vote terbanyak.
                             </p>
-                            <a class="btn" href="">Baca Selengkapnya</a>
+                           <!--  <a class="btn" href="">Baca Selengkapnya</a> -->
                         </div>
                     </div>
                 </div>
@@ -70,7 +72,7 @@
                 </div>
                 <div class="container discount-text">
                     <p style="font-size: 20px;">
-                       Kompetisi desain cake pertama di indonesia dan dapatkan hadianya, ayoo buruan daftar sekarang juga.
+                    Dan jangan lewatkan kesempatan mu dan upload hasil karya terbaikmu
                     </p>
                     <a href="<?= base_url('registrasi/') ?>" class="btn">Daftar Sekarang</a>
                 </div>
@@ -183,118 +185,165 @@
 
 
         <!-- Blog Start -->
-       <!--  <div class="blog">
+        <div class="blog" id="panduan">
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>From Blog</p>
-                    <h2>Latest Yoga Articles</h2>
+                    <!-- <p>From Blog</p> -->
+                    <h3 style="font-weight: bold;">Panduan Pendaftaran Peserta</h3> 
                 </div>
+
                 <div class="owl-carousel blog-carousel wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="blog-item">
+                    <div class="blog-item" style="border:0px solid; border-color: #7410c2;">
                         <div class="blog-img">
-                            <img src="img/blog-1.jpg" alt="Blog">
+                            <img src="<?= base_url("assets/panduan/home1.png") ?>" alt="Blog">
                         </div>
                         <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
+                            <h2>Kunjungi situs kontes desain cake ebunga</h2>
+                            <!-- <div class="blog-meta">
                                 <p><i class="far fa-list-alt"></i>Body Fitness</p>
                                 <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
                                 <p><i class="far fa-comments"></i>5</p>
-                            </div>
+                            </div> -->
                             <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
+                               Buka web broser anda dan ketikan "nama link" pada url web broser anda
                             </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+                           <!--  <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a> -->
                         </div>
                     </div>
                     <div class="blog-item">
                         <div class="blog-img">
-                            <img src="img/blog-2.jpg" alt="Blog">
+                            <img src="<?= base_url("assets/panduan/daftar1.png") ?>" alt="Blog">
                         </div>
                         <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
+                            <h2>Form daftar peserta</h2>
+                           <!--  <div class="blog-meta">
                                 <p><i class="far fa-list-alt"></i>Body Fitness</p>
                                 <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
                                 <p><i class="far fa-comments"></i>5</p>
-                            </div>
+                            </div> -->
                             <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
+                                Isi form pendaftaran anda dengan lengkap untuk dapat upload cake anda
                             </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+                         <!--    <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a> -->
                         </div>
                     </div>
                     <div class="blog-item">
                         <div class="blog-img">
-                            <img src="img/blog-3.jpg" alt="Blog">
+                            <img src="<?= base_url("assets/panduan/login1.png") ?>" alt="Blog">
                         </div>
                         <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
+                            <h2>Login peserta</h2>
+                            <!-- <div class="blog-meta">
                                 <p><i class="far fa-list-alt"></i>Body Fitness</p>
                                 <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
                                 <p><i class="far fa-comments"></i>5</p>
-                            </div>
+                            </div> -->
                             <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
+                              Login dengan email dan password yang anda daftarakan, pastikan email dan password sudah benar 
                             </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+                          <!--   <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a> -->
                         </div>
                     </div>
                     <div class="blog-item">
                         <div class="blog-img">
-                            <img src="img/blog-4.jpg" alt="Blog">
+                           <img src="<?= base_url("assets/panduan/upload1.png") ?>" alt="Blog">
                         </div>
                         <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
+                            <h2>Upload produk cake terbaik anda</h2>
+                            
                             <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
+                                Isi keterangan produk anda dengan benar dan upload desain cake anda
                             </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+                            <!-- <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a> -->
                         </div>
                     </div>
                     <div class="blog-item">
                         <div class="blog-img">
-                            <img src="img/blog-5.jpg" alt="Blog">
+                           <img src="<?= base_url("assets/panduan/profil3.png") ?>" alt="Blog">
                         </div>
                         <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
+                            <h2>Profil cake anda</h2>
+                           
                             <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
+                               Buka profil cake anda dan lihat apakah cake yang anda upload disetujui oleh admin
                             </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+                          
                         </div>
                     </div>
 
 
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-6.jpg" alt="Blog">
-                        </div>
-                        <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
-                            <div class="blog-meta">
-                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
-                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                <p><i class="far fa-comments"></i>5</p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                            </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                    
             </div>
         </div>
- -->
+
+
+
+          <div class="blog" id="panduan">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <!-- <p>From Blog</p> -->
+                    <h3 style="font-weight: bold;">Panduan Vote Cake</h3> 
+                </div>
+
+                <div class="owl-carousel blog-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="blog-item" style="border:0px solid; border-color: #7410c2;">
+                        <div class="blog-img">
+                            <img src="<?= base_url("assets/panduan/home1.png") ?>" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>Kunjungi situs kontes desain cake ebunga</h2>
+                            <!-- <div class="blog-meta">
+                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
+                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                                <p><i class="far fa-comments"></i>5</p>
+                            </div> -->
+                            <p>
+                               Buka web broser anda dan ketikan "nama link" pada url web broser anda
+                            </p>
+                           <!--  <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a> -->
+                        </div>
+                    </div>
+                    
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="<?= base_url("assets/panduan/produk.png") ?>" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>Daftar cake</h2>
+                            <!-- <div class="blog-meta">
+                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
+                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                                <p><i class="far fa-comments"></i>5</p>
+                            </div> -->
+                            <p>
+                             Pilih cake yang ingin anda vote dan anda juga dapat mencari ceke sesuai yang anda inginkan
+                            </p>
+                          <!--   <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a> -->
+                        </div>
+                    </div>
+
+                     <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="<?= base_url("assets/panduan/form_vote.png") ?>" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>Vote cake</h2>
+                            <!-- <div class="blog-meta">
+                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
+                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                                <p><i class="far fa-comments"></i>5</p>
+                            </div> -->
+                            <p>
+                                Klik tombol love untuk vote cake yang anda inginkan dan isi form vote dengan benar
+                            </p>
+                          <!--   <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a> -->
+                        </div>
+                    </div>
+                   
+
+
+                    
+            </div>
+        </div>
+
+

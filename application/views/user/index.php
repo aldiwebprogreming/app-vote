@@ -59,7 +59,16 @@
                             </a>
                           <div class="card-body">
 
-                            <h5 class="card-title text-center"><?= $data['judul_produk'] ?></h5>
+
+
+                         <h5 id="judul_produk" class="card-title text-center"><?= strtoupper($data['judul_produk']) ?></h5> 
+
+                           
+
+
+
+                           <!--  card mobile -->
+                        <div id="keterangan">
                             <p class="card-text text-center"><?= $data['keterangan'] ?>.</p>
                              <p class="card-text text-center" style="font-weight: bold;"><i class="fas fa-store" style="color: #6495ED"></i> <?= $data['nama_toko'] ?></p>
 
@@ -121,19 +130,27 @@
 
 
                                  ?>
+                                  </div>
 
-                                <p><i class="fas fa-heart" style="color: red;"> <?= $vote2 ?></i></p>
+                                <p class="text-center"><i class="fas fa-heart" style="color: red;"> <?= $vote2 ?></i> </p>
 
                                 <?php if ($vote2 == 0) { ?>
 
                                 <?php } else{ ?>
-                                <p class="like"><i class="fas fa-thumbs-up" style="color: blue;"></i> <b>Disukuai</b> <?= $waktu ?></p>
+                               
+
                                <?php } ?>
+
+                               
+                                <center>
                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter<?= $data['id']  ?>"><i class="fas fa-heart"></i></button>
                                  <a class="btn btn-primary" href="<?= base_url("produk/detail/") ?><?= $data['kode_produk'] ?>"><i class="fas fa-eye"></i></a>
                                 
 
                             </center>
+                   
+
+                         <!--  card mobile -->
 
                             <div class="modal fade" id="exampleModalCenter<?= $data['id']  ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                               <div class="modal-dialog modal-dialog-centered" role="document">
@@ -471,6 +488,16 @@ $(document).ready(function()    {
         .like{
             font-size: 8px;
         }
+
+        #keterangan{
+            display: none;
+        }
+        #judul_produk{
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+
     }
 </style>
     </body>
