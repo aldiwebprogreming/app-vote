@@ -192,9 +192,43 @@
                                     
                                     <td><small><?= $kel['name'] ?></small></td>
                                    </tr>
+
+
+                                    <tr>
+                                    <th scope="row">Nama Toko</small></th>
+                                    
+                                    <td><small><?= $produk['nama_toko'] ?></small></td>
+                                   </tr>
+
+
+                                    <tr>
+                                    <th scope="row">Judul Cake</small></th>
+                                    
+                                    <td><small><?= $produk['judul_produk'] ?></small></td>
+                                   </tr>
+
+                                   <tr>
+                                    <th scope="row">Keterangan</small></th>
+                                    
+                                    <td><small><?= $produk['keterangan'] ?></small></td>
+                                   </tr>
+
+                                    <tr>
+                                    <th scope="row">Gambar Sisi 2</small></th>
+                                    
+                                    <td><img class="img-thumbnail" src="<?= base_url('produk/') ?><?= $produk['gambar_produk2'] ?>" style="height: 100px;"></td>
+                                   </tr>
+
+                                   <tr>
+                                    <th scope="row">Gambar Sisi 2</small></th>
+                                    
+                                    <td><img class="img-thumbnail" src="<?= base_url('produk/') ?><?= $produk['gambar_produk3'] ?>" style="height: 100px;"></td>
+                                   </tr>
                                 </tbody>
                               </table>   
 
+
+                              <a href="<?= base_url('ebunga/edit/') ?><?= $produk['kode_produk'] ?>" class="btn btn-primary btn-block">Edit produk anda</a>
                             
 
                       </div>
@@ -207,7 +241,7 @@
         </div>
         <!-- Hero Start -->
        
-        <!-- Hero End -->
+        <!-- Hero End --
 
 
    

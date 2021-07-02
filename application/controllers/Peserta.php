@@ -147,7 +147,7 @@
 
 						$inptu = $this->db->insert('tbl_produk', $data);
 						$this->session->set_flashdata('message', 'swal("Success!", "Produk anda berhasil diupload", "success");');
-                    redirect('upload/');
+                    redirect('profil/');
 
 					}
 
@@ -191,6 +191,10 @@
 
 			$data['cek'] = $this->db->get_where('tbl_produk',array('kode_peserta' => $kode_peserta))->num_rows();
 
+			$kode_peserta = $val['kode_peserta'];
+
+			$data['produk'] = $this->db->get_where('tbl_produk', array('kode_peserta' => $kode_peserta))->row_array();
+
 
 			$this->load->view('template/header2');
 			$this->load->view('peserta/profil', $data);
@@ -207,6 +211,26 @@
 			$this->load->view('template/header2');
 			$this->load->view('peserta/list_vote', $data);
 			$this->load->view('template/footer');
+		}
+
+
+		function edit($kode_produk){
+
+
+			$data['data'] = $this->db->get_where('tbl_produk', array('kode_produk' => $kode_produk))->row_array();
+
+			
+
+			$this->load->view('template/header');
+			$this->load->view('peserta/edit_produk', $data);
+			$this->load->view('template/footer');
+
+		}
+
+
+		function edit_produk_act(){
+			$kode_peserta = $this->input->post('kode_produk');
+			echo $kode_peserta;
 		}
 	}
 

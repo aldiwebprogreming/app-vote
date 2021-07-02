@@ -195,7 +195,7 @@
                 <div class="owl-carousel blog-carousel wow fadeInUp" data-wow-delay="0.1s">
                     <div class="blog-item" style="border:0px solid; border-color: #7410c2;">
                         <div class="blog-img">
-                            <img src="<?= base_url("assets/panduan/home1.png") ?>" alt="Blog">
+                            <img src="<?= base_url("assets/panduan/home2.png") ?>" alt="Blog">
                         </div>
                         <div class="blog-text">
                             <h2>Kunjungi situs kontes desain cake ebunga</h2>
@@ -288,7 +288,7 @@
                 <div class="owl-carousel blog-carousel wow fadeInUp" data-wow-delay="0.1s">
                     <div class="blog-item" style="border:0px solid; border-color: #7410c2;">
                         <div class="blog-img">
-                            <img src="<?= base_url("assets/panduan/home1.png") ?>" alt="Blog">
+                            <img src="<?= base_url("assets/panduan/home2.png") ?>" alt="Blog">
                         </div>
                         <div class="blog-text">
                             <h2>Kunjungi situs kontes desain cake ebunga</h2>
@@ -306,7 +306,7 @@
                     
                     <div class="blog-item">
                         <div class="blog-img">
-                            <img src="<?= base_url("assets/panduan/produk.png") ?>" alt="Blog">
+                            <img src="<?= base_url("assets/panduan/produk3.png") ?>" alt="Blog">
                         </div>
                         <div class="blog-text">
                             <h2>Daftar cake</h2>

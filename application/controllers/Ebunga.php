@@ -30,7 +30,7 @@
 
 		$config['base_url'] = site_url('ebunga/index'); //site url
         $config['total_rows'] = $this->db->get_where('tbl_produk',array('status' => 1))->num_rows(); //total row
-        $config['per_page'] = 3;  //show record per halaman
+        $config['per_page'] = 4;  //show record per halaman
         $config["uri_segment"] = 3;  // uri parameter
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);

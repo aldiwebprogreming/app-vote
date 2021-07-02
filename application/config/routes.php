@@ -65,6 +65,8 @@ $route['upload'] ='peserta/upload';
 $route['profil'] = 'peserta/profil';
 $route['listvote'] = 'peserta/listVote';
 
+$route['ebunga/edit/(:any)'] = 'peserta/edit/$1';
+
 
 // route admin
 $route['admin/login'] ='auth/index';
